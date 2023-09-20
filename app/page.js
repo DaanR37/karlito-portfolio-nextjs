@@ -3,18 +3,18 @@ import React from 'react';
 import Carousel from './_components/Carousel';
 
 const images = [
-  "/bowling.webp",
-  "/diner.webp",
-  "/poolhall.webp",
-  "/restaurant.webp",
-  "/stairs.webp",
+  "/bowling.jpg",
+  "/diner.jpg",
+  "/poolhall.jpg",
+  "/restaurant.jpg",
+  "/stairs.jpg",
 ]
 
 export default function Home() {
   return (
     <div className="App">
       <main>
-        <Carousel images={images} />
+        <Carousel images={images} interval={5000} />
       </main>
     </div>
   )
