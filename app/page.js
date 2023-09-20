@@ -1,12 +1,21 @@
-// import Image from 'next/image';
+"use client"
 import React from 'react';
+import Carousel from './_components/Carousel';
+
+const images = [
+  "/bowling.webp",
+  "/diner.webp",
+  "/poolhall.webp",
+  "/restaurant.webp",
+  "/stairs.webp",
+]
 
 export default function Home() {
-   return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-         <div className='relative min-h-screen w-full'>
-
-         </div>
+  return (
+    <div className="App">
+      <main>
+        <Carousel images={images} />
       </main>
-   )
+    </div>
+  )
 }
