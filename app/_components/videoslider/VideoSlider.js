@@ -11,11 +11,11 @@ SwiperCore.use([Navigation, Pagination]);
 
 /* Change to HTTPS:// before deploying */
 const videos = [
-  'http://www.youtube.com/watch?v=egOmX4quvrs',
-  'http://www.youtube.com/watch?v=ySjWjpCELqU',
-  'http://www.youtube.com/watch?v=OiAgd3CeBs8',
-  'http://www.youtube.com/watch?v=AzBBrWqOD5M',
-  'http://www.youtube.com/watch?v=SarOJwIz4Zg',
+  'https://www.youtube.com/watch?v=egOmX4quvrs',
+  'https://www.youtube.com/watch?v=ySjWjpCELqU',
+  'https://www.youtube.com/watch?v=OiAgd3CeBs8',
+  'https://www.youtube.com/watch?v=AzBBrWqOD5M',
+  'https://www.youtube.com/watch?v=SarOJwIz4Zg',
 ];
 
 const VideoSlider = () => {
