@@ -9,9 +9,9 @@ const DynamicCarousel = dynamic(() => import('./_components/Carousel'), {
 const DynamicAbout = dynamic(() => import('./about/page'), {
   ssr: false,
 });
-const DynamicWork = dynamic(() => import('./work/page'), {
-  ssr: false,
-});
+// const DynamicWork = dynamic(() => import('./work/page'), {
+//   ssr: false,
+// });
 const DynamicContact = dynamic(() => import('./contact/page'), {
   ssr: false,
 });
@@ -30,7 +30,7 @@ export default function Home() {
       <LocomotiveScrollSetup />
       <DynamicCarousel images={images} interval={5000} />
       <DynamicAbout />
-      <DynamicWork />
+      {/* <DynamicWork /> */}
       <DynamicContact />
     </main>
   )
