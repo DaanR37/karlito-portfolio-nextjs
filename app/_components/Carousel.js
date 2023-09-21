@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import ImageComp from "./ImageComp";
 
 export default function Carousel({ images, interval }) {
   // const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,15 +31,19 @@ export default function Carousel({ images, interval }) {
   // };
 
   return (
-
-    <div className="relative w-[100vw] h-[100vh]">
+    <div className="relative w-[100vw] min-h-[100vh]">
+      <div className='absolute 
+        left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10'
+      >
+        <ImageComp />
+      </div>
       {images.map((image, index) => (
         <Image
           key={index}
           src={`/images${image}`}
           alt=""
-          width={300}
-          height={300}
+          width={800}
+          height={800}
           style={{
             position: 'absolute',
             width: '100%',

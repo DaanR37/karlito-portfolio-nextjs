@@ -1,6 +1,20 @@
 "use client"
 import React from 'react';
-import Carousel from './_components/Carousel';
+import LocomotiveScrollSetup from './_components/LocomotiveScrollSetup';
+import dynamic from 'next/dynamic';
+
+const DynamicCarousel = dynamic(() => import('./_components/Carousel'), {
+  ssr: false,
+});
+const DynamicAbout = dynamic(() => import('./about/page'), {
+  ssr: false,
+});
+const DynamicWork = dynamic(() => import('./work/page'), {
+  ssr: false,
+});
+const DynamicContact = dynamic(() => import('./contact/page'), {
+  ssr: false,
+});
 
 const images = [
   "/bowling.jpg",
@@ -12,10 +26,12 @@ const images = [
 
 export default function Home() {
   return (
-    <div className="App">
-      <main>
-        <Carousel images={images} interval={5000} />
-      </main>
-    </div>
+    <main className="App relative">
+      <LocomotiveScrollSetup />
+      <DynamicCarousel images={images} interval={5000} />
+      <DynamicAbout />
+      <DynamicWork />
+      <DynamicContact />
+    </main>
   )
-}
+};
