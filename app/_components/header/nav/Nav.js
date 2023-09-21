@@ -8,10 +8,10 @@ import Curve from './curve/Curve';
 import Footer from './footer/Footer';
 
 const navItems = [
-  // {
-  //   title: "Home",
-  //   href: "/",
-  // },
+  {
+    title: "Home",
+    href: "/",
+  },
   {
     title: "Over mij",
     href: "#about",
