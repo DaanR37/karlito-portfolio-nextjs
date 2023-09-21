@@ -9,7 +9,6 @@ import 'swiper/swiper-bundle.min.css';
 SwiperCore.use([Navigation, Pagination]);
 
 
-/* Change to HTTPS:// before deploying */
 const videos = [
   'https://www.youtube.com/watch?v=egOmX4quvrs',
   'https://www.youtube.com/watch?v=ySjWjpCELqU',

@@ -1,6 +1,5 @@
-import VideoSlider from "@/_components/videoslider/VideoSlider";
+import VideoSlider from "../_components/videoslider/VideoSlider";
 
-/* Change to HTTPS:// before deploying */
 const videos = [
   'https://www.youtube.com/watch?v=egOmX4quvrs',
   'https://www.youtube.com/watch?v=ySjWjpCELqU',
