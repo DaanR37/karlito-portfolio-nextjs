@@ -1,10 +1,12 @@
 import './globals.scss';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google';
 
-const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
-  ssr: false,
-});
+// import Header from './_components/header/Header';
+
+// const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
+//   ssr: false,
+// });
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,7 +19,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <DynamicHeader />
+        {/* <Header /> */}
+        {/* <DynamicHeader /> */}
         {children}
       </body>
     </html>
