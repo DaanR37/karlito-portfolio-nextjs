@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 // import Header from "./_components/header/Header";
 import Carousel from "./_components/Carousel";
 import AboutPage from "./about/page";
-import WorkPage from "./work/page";
+// import WorkPage from "./work/page";
 import ContactPage from "./contact/page";
 
 const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
