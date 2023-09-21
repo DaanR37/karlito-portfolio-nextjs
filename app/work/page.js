@@ -1,17 +1,18 @@
-import VideoSlider from "../_components/videoslider/VideoSlider";
+// import React from 'react';
+// import VideoSlider from "../_components/videoslider/VideoSlider";
 
-const videos = [
-  'https://www.youtube.com/watch?v=egOmX4quvrs',
-  'https://www.youtube.com/watch?v=ySjWjpCELqU',
-  'https://www.youtube.com/watch?v=OiAgd3CeBs8',
-  'https://www.youtube.com/watch?v=AzBBrWqOD5M',
-  'https://www.youtube.com/watch?v=SarOJwIz4Zg',
-];
+// const videos = [
+//   'http://www.youtube.com/watch?v=egOmX4quvrs',
+//   'http://www.youtube.com/watch?v=ySjWjpCELqU',
+//   'http://www.youtube.com/watch?v=OiAgd3CeBs8',
+//   'http://www.youtube.com/watch?v=AzBBrWqOD5M',
+//   'http://www.youtube.com/watch?v=SarOJwIz4Zg',
+// ];
 
-export default function page() {
-  return (
-    <main id='work' className='work relative w-full h-[100vh] bg-transparent'>
-      <VideoSlider videos={videos} />
-    </main>
-  );
-}
+// export default function page() {
+//   return (
+//     <main id='work' className='work relative w-full h-[100vh] bg-transparent'>
+//       <VideoSlider videos={videos} />
+//     </main>
+//   );
+// }

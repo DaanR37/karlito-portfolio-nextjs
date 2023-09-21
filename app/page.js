@@ -41,7 +41,7 @@ export default function Home() {
       {/* <Header /> */}
       <Carousel images={images} interval={5000} />
       <AboutPage />
-      <WorkPage />
+      {/* <WorkPage /> */}
       <ContactPage />
     </main>
   )
