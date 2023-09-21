@@ -1,6 +1,4 @@
-// pages/work.js
 import VideoSlider from "@/_components/videoslider/VideoSlider";
-
 
 /* Change to HTTPS:// before deploying */
 const videos = [

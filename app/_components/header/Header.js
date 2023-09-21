@@ -14,9 +14,16 @@ export default function Header() {
     setIsActive(false);
   };
 
+  // useEffect(() => {
+  //   if (isActive) setIsActive(false)
+  // }, [pathname])
+
   useEffect(() => {
-    if (isActive) setIsActive(false)
-  }, [pathname])
+    setIsActive(prevIsActive => {
+      if (prevIsActive) return false;
+      return prevIsActive;
+    });
+  }, [pathname]);
 
   return (
     <>
