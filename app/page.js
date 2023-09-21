@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import Carousel from "./_components/Carousel";
 import AboutPage from "./about/page";
 import ContactPage from "./contact/page";
+import ProjectPage from "./projects/page";
 
 const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
   ssr: false,
@@ -40,6 +41,7 @@ export default function Home() {
       {/* <Header /> */}
       <Carousel images={images} interval={5000} />
       <AboutPage />
+      <ProjectPage />
       <ContactPage />
     </main>
   )
