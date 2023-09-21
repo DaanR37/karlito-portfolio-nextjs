@@ -1,6 +1,6 @@
 import './globals.scss';
-// import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google';
+// import dynamic from 'next/dynamic';
 
 // import Header from './_components/header/Header';
 
