@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ContactForm from '@/_components/contactform/ContactForm';
+import MagneticHover from "../_components/magneticHover/MagneticHover";
+
 import styles from "./page.module.scss";
 import Image from "next/image";
 
@@ -10,7 +12,12 @@ import EmailIcon from "../../public/images/icons/svg/email_icon.svg";
 import PinPoint from "../../public/images/icons/svg/pin_point.svg";
 import ArrowUp from "../../public/images/icons/svg/arrow_up_colored.svg";
 
+import LocomotiveScroll from "locomotive-scroll";
+
+
 export default function Page() {
+  const scroll = new LocomotiveScroll();
+  const targetId = '#home';
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -44,6 +51,14 @@ export default function Page() {
   }
   function handleMessageChange(e) {
     setMessage(e.target.value);
+  }
+
+  function handleScroll(targetId) {
+    scroll.scrollTo(targetId, {
+      duration: 3,
+      lerp: 0.05,
+      smoothWheel: true,
+    });
   }
 
   return (
@@ -98,14 +113,16 @@ export default function Page() {
                   {/* Icon 1 */}
                   <div className="flex items-center justify-start
                       mb-6">
-                    <div className="
+                    <div className="relative
                       w-[40px] h-[40px]"
                     >
-                      <a
+                      <motion.a
                         href="tel:0651230756"
                         target="_blank"
                         rel="noreferrer"
-                        className=""
+                        whileHover={{ y: -2 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="absolute"
                       >
                         <Image
                           src={PhoneIcon}
@@ -118,22 +135,30 @@ export default function Page() {
                             filter: "invert(1)",
                           }}
                         />
-                      </a>
+                      </motion.a>
                     </div>
-                    <p className="ml-6">
-                      +31 (0) 6 512 307 56
-                    </p>
+                    <a
+                      href="tel:0651230756"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <p className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}>
+                        +31 (0) 6 512 307 56
+                      </p>
+                    </a>
                   </div>
                   {/* Icon 2 */}
                   <div className="flex items-center justify-start
                       my-6">
-                    <div className="
+                    <div className="relative
                         w-[40px] h-[40px]">
-                      <a
+                      <motion.a
                         href="mailto:info@karlein.nl"
                         target="_blank"
                         rel="noreferrer"
-                        className=""
+                        whileHover={{ y: -2 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="absolute"
                       >
                         <Image
                           src={EmailIcon}
@@ -146,22 +171,31 @@ export default function Page() {
                             filter: "invert(1)",
                           }}
                         />
-                      </a>
+                      </motion.a>
                     </div>
-                    <p className="ml-6">
-                      info@karlein.nl
-                    </p>
+                    <a
+                      href="mailto:info@karlein.nl"
+                      target="_blank"
+                      rel="noreferrer"
+                      className=""
+                    >
+                      <p className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}>
+                        info@karlein.nl
+                      </p>
+                    </a>
                   </div>
                   {/* Icon 3 */}
                   <div className="flex items-center justify-start
                       mt-6">
-                    <div className="
+                    <div className="relative
                         w-[40px] h-[40px]">
-                      <a
+                      <motion.a
                         href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
                         target="_blank"
                         rel="noreferrer"
-                        className=""
+                        whileHover={{ y: -2 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="absolute"
                       >
                         <Image
                           src={PinPoint}
@@ -174,11 +208,18 @@ export default function Page() {
                             filter: "invert(1)",
                           }}
                         />
-                      </a>
+                      </motion.a>
                     </div>
-                    <p className="ml-6">
-                      Amsterdam
-                    </p>
+                    <a
+                      href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
+                      target="_blank"
+                      rel="noreferrer"
+                      className=""
+                    >
+                      <p className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}>
+                        Amsterdam
+                      </p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -193,22 +234,26 @@ export default function Page() {
           <div className="absolute bottom-0 mb-4 flex items-center
                 w-[70px] h-[70px]"
           >
-            <a
-              href="tel:0651230756"
-              target="_blank"
-              rel="noreferrer"
-              className=""
-            >
-              <Image
-                src={ArrowUp}
-                alt=""
-                style={{
-                  objectFit: "cover",
-                  width: "100%",
-                  opacity: "0.9",
-                }}
-              />
-            </a>
+
+            <ul>
+              <MagneticHover>
+                <li
+                  onClick={() => handleScroll(targetId)}
+                  className="cursor-pointer"
+                >
+                  <Image
+                    src={ArrowUp}
+                    alt=""
+                    style={{
+                      objectFit: "cover",
+                      width: "100%",
+                      opacity: "0.9",
+                    }}
+                  />
+                </li>
+              </MagneticHover>
+            </ul>
+
           </div>
         </div>
 
