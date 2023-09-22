@@ -6,7 +6,6 @@ import LocomotiveScroll from "locomotive-scroll";
 
 
 export default function NavLink({ data, isActive, setSelectedIndicator, closeMenu }) {
-
   const { title, href, index } = data;
 
   // Add a new `onClick` handler to close the menu when the user clicks on a link.
@@ -37,4 +36,4 @@ export default function NavLink({ data, isActive, setSelectedIndicator, closeMen
       </a>
     </motion.div>
   )
-}
+};

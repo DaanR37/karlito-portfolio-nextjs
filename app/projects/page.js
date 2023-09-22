@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import VideoSlider from '@/_components/videoslider/VideoSlider';
 import styles from "./page.module.scss";
+import Image from 'next/image';
+
+import svgArrow from "../../public/images/arrows-svg/arrows-slider.svg";
 
 export default function Page() {
   const [currentVideo, setCurrentVideo] = useState(0);
@@ -48,18 +51,26 @@ export default function Page() {
         {videos[currentVideo].title}
       </div>
       <motion.button
-        whileHover={{ backgroundColor: '#555555', transition: { duration: 0.2 } }}
+        whileHover={{ backgroundColor: '#555555', transition: { duration: 0.3 } }}
         className={`${styles.navButton} ${styles.prevButton}`}
         onClick={prevVideo}
       >
-        Previous
+        <Image
+          src={svgArrow}
+          alt=''
+          className='rotate-[180deg] invert'
+        />
       </motion.button>
       <motion.button
         whileHover={{ backgroundColor: '#555555', transition: { duration: 0.2 } }}
         className={`${styles.navButton} ${styles.nextButton}`}
         onClick={nextVideo}
       >
-        Next
+        <Image
+          src={svgArrow}
+          alt=''
+          className='invert'
+        />
       </motion.button>
       <VideoSlider video={videos[currentVideo]} />
     </main>

@@ -12,18 +12,18 @@ import ProjectPage from "./projects/page";
 const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
   ssr: false,
 });
-// const DynamicCarousel = dynamic(() => import('./_components/Carousel'), {
-//   ssr: false,
-// });
-// const DynamicAbout = dynamic(() => import('./about/page'), {
-//   ssr: false,
-// });
-// const DynamicWork = dynamic(() => import('./work/page'), {
-//   ssr: false,
-// });
-// const DynamicContact = dynamic(() => import('./contact/page'), {
-//   ssr: false,
-// });
+const DynamicCarousel = dynamic(() => import('./_components/Carousel'), {
+  ssr: false,
+});
+const DynamicAbout = dynamic(() => import('./about/page'), {
+  ssr: false,
+});
+const DynamicProjects = dynamic(() => import('./projects/page'), {
+  ssr: false,
+});
+const DynamicContact = dynamic(() => import('./contact/page'), {
+  ssr: false,
+});
 
 const images = [
   "/bowling.jpg",
@@ -38,11 +38,10 @@ export default function Home() {
     <main className="App relative">
       <LocomotiveScrollSetup />
       <DynamicHeader />
-      {/* <Header /> */}
-      <Carousel images={images} interval={5000} />
-      <AboutPage />
-      <ProjectPage />
-      <ContactPage />
+      <DynamicCarousel images={images} interval={5000} />
+      <DynamicAbout />
+      <DynamicProjects />
+      <DynamicContact />
     </main>
   )
 };
