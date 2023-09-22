@@ -1,6 +1,5 @@
 // "use client"
 import styles from "./navlink.module.scss";
-// import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { slide, scale } from "../../anim";
 import LocomotiveScroll from "locomotive-scroll";
