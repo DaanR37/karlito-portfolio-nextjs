@@ -18,11 +18,11 @@ const DynamicContact = dynamic(() => import('./contact/page'), {
 });
 
 const images = [
-  "/bowling.jpg",
-  "/diner.jpg",
-  "/poolhall.jpg",
-  "/restaurant.jpg",
-  "/stairs.jpg",
+  "/homepageCarousel/bowling.jpg",
+  "/homepageCarousel/diner.jpg",
+  "/homepageCarousel/poolhall.jpg",
+  "/homepageCarousel/restaurant.jpg",
+  "/homepageCarousel/stairs.jpg",
 ]
 
 export default function Home() {
