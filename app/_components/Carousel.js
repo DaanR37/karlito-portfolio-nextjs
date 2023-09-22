@@ -15,25 +15,11 @@ export default function Carousel({ images, interval }) {
     return () => clearInterval(timer);
   }, [images, interval]);
 
-
-  // const handleNext = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex + 1 === images.length ? 0 : prevIndex + 1
-  //   );
-  // };
-  // const handlePrevious = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
-  //   );
-  // };
-  // const handleDotClick = (index) => {
-  //   setCurrentIndex(index);
-  // };
-
   return (
-    <div className="relative w-[100vw] min-h-[100vh]">
-      <div className='absolute 
-        left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10'
+    <div className="relative w-[100vw] h-[110vh]">
+      <div className='absolute z-10
+        left-1/2 top-[45%] 
+        -translate-x-1/2 -translate-y-[45%]'
       >
         <ImageComp />
       </div>

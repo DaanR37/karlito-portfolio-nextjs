@@ -1,5 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
+import styles from "../../projects/page.module.scss";
 
 const variants = {
   hidden: { opacity: 0 },
@@ -20,6 +21,7 @@ const VideoSlider = ({ video }) => (
     exit="exit"
   >
     <iframe
+      className={`${styles.videoPlayer}`}
       width="560"
       height="315"
       src={`https://www.youtube.com/embed/${video.id}`}
@@ -28,7 +30,7 @@ const VideoSlider = ({ video }) => (
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     ></iframe>
-</motion.div>
+  </motion.div>
 );
 
 export default VideoSlider;

@@ -9,6 +9,10 @@
   margin: 0;
   padding: 0;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 html,
 body {
   overflow-x: hidden;
@@ -26,13 +30,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //   scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
-  background-color: whitesmoke;
-}
-a {
-  color: inherit;
-  text-decoration: none;
+  background-color: black;
 }
 
 /* CSS for indicator dot on homepage */

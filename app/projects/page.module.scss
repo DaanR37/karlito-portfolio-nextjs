@@ -1,0 +1,58 @@
+.projects {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.videoTitle {
+  font-size: 21px;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.videoPlayer {
+  position: relative;
+  width: 60vw;
+  max-width: 800px;
+  height: 33.75vw;
+  max-height: 450px;
+  margin-top: 0;
+  border: 2px solid #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3d87c7;
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  border: 0.5px solid whitesmoke;
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
