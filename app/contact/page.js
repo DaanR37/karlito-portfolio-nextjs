@@ -235,8 +235,8 @@ export default function Page() {
                 w-[70px] h-[70px]"
           >
 
-            <ul>
-              <MagneticHover>
+            <MagneticHover>
+              <ul>
                 <li
                   onClick={() => handleScroll(targetId)}
                   className="cursor-pointer"
@@ -251,8 +251,8 @@ export default function Page() {
                     }}
                   />
                 </li>
-              </MagneticHover>
-            </ul>
+              </ul>
+            </MagneticHover>
 
           </div>
         </div>
