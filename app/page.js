@@ -27,7 +27,7 @@ const images = [
 
 export default function Home() {
   return (
-    <main id="home" className="App relative">
+    <main className="App relative">
       <LocomotiveScrollSetup />
       <DynamicHeader />
       <Carousel images={images} interval={5000} />
