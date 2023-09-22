@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
-import LocomotiveScrollSetup from './_components/LocomotiveScrollSetup';
 import dynamic from 'next/dynamic';
 import Carousel from "./_components/Carousel";
+import LocomotiveScrollSetup from './_components/LocomotiveScrollSetup';
 
 const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
   ssr: false,

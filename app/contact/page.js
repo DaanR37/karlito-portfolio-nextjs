@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ContactForm from '@/_components/contactform/ContactForm';
-import MagneticHover from "../_components/magneticHover/MagneticHover";
+// import MagneticHover from "../_components/magneticHover/MagneticHover";
 
 import styles from "./page.module.scss";
 import Image from "next/image";
@@ -235,7 +235,7 @@ export default function Page() {
                 w-[70px] h-[70px]"
           >
 
-            <MagneticHover>
+            {/* <MagneticHover> */}
               <ul>
                 <li
                   onClick={() => handleScroll(targetId)}
@@ -252,7 +252,7 @@ export default function Page() {
                   />
                 </li>
               </ul>
-            </MagneticHover>
+            {/* </MagneticHover> */}
 
           </div>
         </div>
