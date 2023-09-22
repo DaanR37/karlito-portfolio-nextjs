@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-
 import LogoKarlito from "../../public/images/logos/karlitos-way-locations.webp";
 
 export default function ImageComp() {

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import VideoSlider from '@/_components/videoslider/VideoSlider';
 import styles from "./page.module.scss";
 import Image from 'next/image';
-import svgArrow from "../../public/images/arrows-svg/arrows-slider.svg";
+import svgArrow from "../../public/images/icons/svg/arrows-slider.svg";
 
 export default function Page() {
   const [currentVideo, setCurrentVideo] = useState(0);

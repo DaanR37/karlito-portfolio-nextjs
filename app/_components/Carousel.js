@@ -15,7 +15,7 @@ export default function Carousel({ images, interval }) {
   }, [images, interval]);
 
   return (
-    <div className="relative w-[100vw] h-[110vh]">
+    <div id="home" className="relative w-[100vw] h-[110vh]">
       <div className='absolute z-10
         left-1/2 top-[45%] 
         -translate-x-1/2 -translate-y-[45%]'

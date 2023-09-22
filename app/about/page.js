@@ -11,7 +11,7 @@ export default function Page() {
     triggerOnce: false,
   });
   const variants = {
-    hidden: { opacity: 0, y: "600px" },
+    hidden: { opacity: 0, y: "300px" },
     visible: { opacity: 1, y: 0 },
   };
 

@@ -2,17 +2,9 @@
 import React from 'react';
 import LocomotiveScrollSetup from './_components/LocomotiveScrollSetup';
 import dynamic from 'next/dynamic';
-
-// import Header from "./_components/header/Header";
 import Carousel from "./_components/Carousel";
-import AboutPage from "./about/page";
-import ContactPage from "./contact/page";
-import ProjectPage from "./projects/page";
 
 const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
-  ssr: false,
-});
-const DynamicCarousel = dynamic(() => import('./_components/Carousel'), {
   ssr: false,
 });
 const DynamicAbout = dynamic(() => import('./about/page'), {
@@ -35,10 +27,10 @@ const images = [
 
 export default function Home() {
   return (
-    <main className="App relative">
+    <main id="home" className="App relative">
       <LocomotiveScrollSetup />
       <DynamicHeader />
-      <DynamicCarousel images={images} interval={5000} />
+      <Carousel images={images} interval={5000} />
       <DynamicAbout />
       <DynamicProjects />
       <DynamicContact />
