@@ -1,11 +1,13 @@
-"use client"
+// "use client"
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Carousel from "./_components/Carousel";
-// import Contact from "./contact/page";
+// import Carousel from "./_components/Carousel";
 import LocomotiveScrollSetup from './_components/LocomotiveScrollSetup';
 
 const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
+  ssr: false,
+});
+const DynamicCarousel = dynamic(() => import('./_components/Carousel'), {
   ssr: false,
 });
 const DynamicAbout = dynamic(() => import('./about/page'), {
@@ -31,11 +33,11 @@ export default function Home() {
     <main className="relative w-full">
       <LocomotiveScrollSetup />
       <DynamicHeader />
-      <Carousel images={images} interval={5000} />
+      {/* <Carousel images={images} interval={5000} /> */}
+      <DynamicCarousel images={images} interval={5000} />
       <DynamicAbout />
       <DynamicProjects />
       <DynamicContact />
-      {/* <Contact /> */}
     </main>
   )
 };
