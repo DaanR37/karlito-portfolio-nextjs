@@ -1,4 +1,4 @@
-// "use client"
+"use client"
 import React from 'react';
 import dynamic from 'next/dynamic';
 // import Carousel from "./_components/Carousel";
