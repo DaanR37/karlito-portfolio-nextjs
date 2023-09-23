@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ContactForm from '@/_components/contactform/ContactForm';
 import MagneticHover from "../_components/magneticHover/MagneticHover";
@@ -25,6 +25,14 @@ export default function Page() {
   const [validation, setValidation] = useState("");
   // const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Your code that relies on the window object
+      // For example, initializing Locomotive Scroll
+      const scroll = new LocomotiveScroll();
+    }
+  }, []);
 
 
   function handleFormSubmit(e) {
