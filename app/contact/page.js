@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import ContactForm from '@/_components/contactform/ContactForm';
 import MagneticHover from "../_components/magneticHover/MagneticHover";
@@ -12,7 +12,7 @@ import EmailIcon from "../../public/images/icons/svg/email_icon.svg";
 import PinPoint from "../../public/images/icons/svg/pin_point.svg";
 import ArrowUp from "../../public/images/icons/svg/arrow_up_colored.svg";
 
-import LocomotiveScroll from "locomotive-scroll";
+// import LocomotiveScroll from "locomotive-scroll";
 
 
 export default function Page() {
