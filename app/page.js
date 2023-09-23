@@ -2,6 +2,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Carousel from "./_components/Carousel";
+// import Contact from "./contact/page";
 import LocomotiveScrollSetup from './_components/LocomotiveScrollSetup';
 
 const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
@@ -27,13 +28,14 @@ const images = [
 
 export default function Home() {
   return (
-    <main className="App relative">
+    <main className="relative w-full">
       <LocomotiveScrollSetup />
       <DynamicHeader />
       <Carousel images={images} interval={5000} />
       <DynamicAbout />
       <DynamicProjects />
       <DynamicContact />
+      {/* <Contact /> */}
     </main>
   )
 };

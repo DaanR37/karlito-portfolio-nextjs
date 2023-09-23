@@ -1,4 +1,4 @@
-// "use client"
+"use client"
 import React, { useState } from 'react'
 import styles from './nav.module.scss';
 import { motion } from 'framer-motion';
@@ -8,10 +8,11 @@ import NavLink from './navlink/NavLink';
 import Curve from './curve/Curve';
 import Footer from './footer/Footer';
 
+{/* Was "/" at Home */}
 const navItems = [
   {
     title: "Home",
-    href: "/",
+    href: "#home", 
   },
   {
     title: "Over mij",

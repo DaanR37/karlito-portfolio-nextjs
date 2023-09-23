@@ -14,10 +14,6 @@ export default function Header() {
     setIsActive(false);
   };
 
-  // useEffect(() => {
-  //   if (isActive) setIsActive(false)
-  // }, [pathname])
-
   useEffect(() => {
     setIsActive(prevIsActive => {
       if (prevIsActive) return false;

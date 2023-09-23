@@ -45,7 +45,7 @@ export default function Page() {
 
 
   return (
-    <main id="projects" className={`${styles.projects}`}>
+    <main id='projects' className={`${styles.projects}`}>
       <div className={styles.videoTitle}>
         {videos[currentVideo].title}
       </div>

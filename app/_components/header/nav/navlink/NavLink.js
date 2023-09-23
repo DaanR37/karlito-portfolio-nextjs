@@ -8,10 +8,8 @@ import LocomotiveScroll from "locomotive-scroll";
 export default function NavLink({ data, isActive, setSelectedIndicator, closeMenu }) {
   const { title, href, index } = data;
 
-  // Add a new `onClick` handler to close the menu when the user clicks on a link.
   const handleClick = () => {
-    // Close the menu by calling the closeMenu callback
-    closeMenu();
+    closeMenu(); // Close the menu by calling the closeMenu callback
 
     // Scroll to the appropriate section
     const scroll = new LocomotiveScroll({
@@ -20,11 +18,9 @@ export default function NavLink({ data, isActive, setSelectedIndicator, closeMen
 
     // Check if the href is an anchor link (starts with "#")
     if (href.startsWith("#")) {
-      // Scroll to the section with the corresponding ID
-      scroll.scrollTo(href);
+      scroll.scrollTo(href); // Scroll to the section with the corresponding ID
     } else {
-      // If it's a regular link, navigate to the respective page
-      window.location.href = href;
+      window.location.href = href; // If it's a regular link, navigate to the respective page
     }
   };
 
