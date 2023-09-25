@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import Carousel from '../components/Carousel';
 import { motion } from 'framer-motion';
 import LogoKarlito from "../../public/images/logos/karlitos-way-locations.webp";

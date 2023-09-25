@@ -35,9 +35,11 @@ export default function LocomotiveScrollSetup() {
     })();
   }, []);
 
-  return (
-    <div>
-      {/* <LoaderAnimation isLoading={isLoading} /> */}
-    </div>
-  );
+  return null;
+
+  // return (
+  //   <div>
+  //     {/* <LoaderAnimation isLoading={isLoading} /> */}
+  //   </div>
+  // );
 }
