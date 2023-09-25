@@ -8,11 +8,11 @@ import NavLink from './navlink/NavLink';
 import Curve from './curve/Curve';
 import Footer from './footer/Footer';
 
-{/* Was "/" at Home */}
+{/* was "/" on "home" */ }
 const navItems = [
   {
     title: "Home",
-    href: "/", 
+    href: "#home",
   },
   {
     title: "Over mij",
