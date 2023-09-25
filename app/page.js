@@ -6,16 +6,16 @@ import LocomotiveScrollSetup from './components/LocomotiveScrollSetup';
 const DynamicHeader = dynamic(() => import('./components/header/Header'), {
   ssr: false,
 });
-const DynamicHomepage = dynamic(() => import('./homepage/Page'), {
+const DynamicHomepage = dynamic(() => import('./homepage/page'), {
   ssr: false,
 });
-const DynamicAbout = dynamic(() => import('./about/Page'), {
+const DynamicAbout = dynamic(() => import('./about/page'), {
   ssr: false,
 });
-const DynamicProjects = dynamic(() => import('./projects/Page'), {
+const DynamicProjects = dynamic(() => import('./projects/page'), {
   ssr: false,
 });
-const DynamicContact = dynamic(() => import('./contact/Page'), {
+const DynamicContact = dynamic(() => import('./contact/page'), {
   ssr: false,
 });
 
