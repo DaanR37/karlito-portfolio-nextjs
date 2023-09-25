@@ -14,12 +14,12 @@ export default function Carousel({ images, interval }) {
   }, [images, interval]);
 
   return (
-    <main className="relative w-[100vw] h-[110vh]">
+    <div className="relative w-[100vw] h-[110vh]">
       {images.map((image, index) => (
         <Image
           key={index}
           src={`/images${image}`}
-          alt=""
+          alt="Image Rotator"
           width={800}
           height={800}
           style={{
@@ -32,6 +32,6 @@ export default function Carousel({ images, interval }) {
           }}
         />
       ))}
-    </main>
+    </div>
   );
 };

@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import React from 'react';
 import dynamic from 'next/dynamic';
 import LocomotiveScrollSetup from './components/LocomotiveScrollSetup';
@@ -23,7 +23,7 @@ const DynamicContact = dynamic(() => import('./contact/page'), {
 
 export default function Home() {
   return (
-    <main className="relative w-full">
+    <main className="w-full">
       <LocomotiveScrollSetup />
       <DynamicHeader />
       {/* <HomePage /> */}
