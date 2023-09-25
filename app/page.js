@@ -2,7 +2,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import LocomotiveScrollSetup from './components/LocomotiveScrollSetup';
-// import HomePage from "../app/homepage";
 
 
 const DynamicHeader = dynamic(() => import('./components/header/Header'), {
@@ -27,7 +26,6 @@ export default function Home() {
     <main className="relative w-full">
       <LocomotiveScrollSetup />
       <DynamicHeader />
-      {/* <HomePage /> */}
       <DynamicHomepage />
       <DynamicAbout />
       <DynamicProjects />

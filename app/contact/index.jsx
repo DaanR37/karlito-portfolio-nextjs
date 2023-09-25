@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ContactForm from '@/components/contactform/ContactForm';
+import ContactForm from "@/components/contactform/ContactForm";
 import MagneticHover from "../components/magneticHover/MagneticHover";
 
 import styles from "./page.module.scss";
@@ -12,12 +12,11 @@ import EmailIcon from "../../public/images/icons/svg/email_icon.svg";
 import PinPoint from "../../public/images/icons/svg/pin_point.svg";
 import ArrowUp from "../../public/images/icons/svg/arrow_up_colored.svg";
 
-// import LocomotiveScroll from "locomotive-scroll";
-
+import LocomotiveScroll from "locomotive-scroll";
 
 export default function Contact() {
-  // const scroll = new LocomotiveScroll();
-  // const targetId = '#home';
+  const scroll = new LocomotiveScroll();
+  const targetId = "#home";
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,8 +24,6 @@ export default function Contact() {
   const [validation, setValidation] = useState("");
   // const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
-
-
 
   function handleFormSubmit(e) {
     // e.preventDefault();
@@ -43,7 +40,7 @@ export default function Contact() {
       setValidation("Schrijf hier je bericht");
       return;
     }
-  };
+  }
   function handleNameChange(e) {
     setName(e.target.value);
   }
@@ -54,37 +51,38 @@ export default function Contact() {
     setMessage(e.target.value);
   }
 
-  // function handleScroll(targetId) {
-  //   scroll.scrollTo(targetId, {
-  //     duration: 3,
-  //     lerp: 0.05,
-  //     smoothWheel: true,
-  //   });
-  // }
+  function handleScroll(targetId) {
+    scroll.scrollTo(targetId, {
+      duration: 3,
+      lerp: 0.05,
+      smoothWheel: true,
+    });
+  }
 
   return (
-    <main id='contact' className='contact relative w-full h-[100vh]'>
-      <div className='absolute w-full h-full bg-dark'>
+    <main id="contact" className="contact relative w-full h-[100vh]">
+      <div className="absolute w-full h-full bg-dark">
+        <div
+          className={`${styles.karlein} absolute w-1/2 h-full left-0 bg-[#587a97]`}
+        ></div>
 
-        <div className={`${styles.karlein} absolute w-1/2 h-full left-0 bg-[#587a97]`}>
-        </div>
-
-        <div className='absolute flex items-center justify-center w-full h-full'>
-
-          <div className='absolute flex
+        <div className="absolute flex items-center justify-center w-full h-full">
+          <div
+            className="absolute flex
               w-[75vw] h-[70vh]
-              rounded-[5px] bg-dark'
+              rounded-[5px] bg-dark"
           >
             {/* Container Contact Form & Contact Details */}
-            <div className="absolute flex
+            <div
+              className="absolute flex
                     w-full h-full"
             >
-
               {/* Container Contact Form right Container */}
-              <div className='absolute 
+              <div
+                className="absolute 
                   w-1/2 h-full right-0
                   flex justify-center items-center 
-                bg-[#587a97]'
+                bg-[#587a97]"
               >
                 <div className="absolute w-full mx-auto">
                   <ContactForm
@@ -102,19 +100,24 @@ export default function Contact() {
               </div>
 
               {/* Container Contact Details left */}
-              <div className="
+              <div
+                className="
                       w-1/2 h-full"
               >
                 {/* Container Icons with Text */}
-                <div className=" 
+                <div
+                  className=" 
                     w-full h-1/2 px-14 mt-10
                     flex flex-col justify-evenly
                     text-light"
                 >
                   {/* Icon 1 */}
-                  <div className="flex items-center justify-start
-                      mb-6">
-                    <div className="relative
+                  <div
+                    className="flex items-center justify-start
+                      mb-6"
+                  >
+                    <div
+                      className="relative
                       w-[40px] h-[40px]"
                     >
                       <motion.a
@@ -138,21 +141,23 @@ export default function Contact() {
                         />
                       </motion.a>
                     </div>
-                    <a
-                      href="tel:0651230756"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <p className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}>
+                    <a href="tel:0651230756" target="_blank" rel="noreferrer">
+                      <p
+                        className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}
+                      >
                         +31 (0) 6 512 307 56
                       </p>
                     </a>
                   </div>
                   {/* Icon 2 */}
-                  <div className="flex items-center justify-start
-                      my-6">
-                    <div className="relative
-                        w-[40px] h-[40px]">
+                  <div
+                    className="flex items-center justify-start
+                      my-6"
+                  >
+                    <div
+                      className="relative
+                        w-[40px] h-[40px]"
+                    >
                       <motion.a
                         href="mailto:info@karlein.nl"
                         target="_blank"
@@ -180,16 +185,22 @@ export default function Contact() {
                       rel="noreferrer"
                       className=""
                     >
-                      <p className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}>
+                      <p
+                        className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}
+                      >
                         info@karlein.nl
                       </p>
                     </a>
                   </div>
                   {/* Icon 3 */}
-                  <div className="flex items-center justify-start
-                      mt-6">
-                    <div className="relative
-                        w-[40px] h-[40px]">
+                  <div
+                    className="flex items-center justify-start
+                      mt-6"
+                  >
+                    <div
+                      className="relative
+                        w-[40px] h-[40px]"
+                    >
                       <motion.a
                         href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
                         target="_blank"
@@ -217,29 +228,28 @@ export default function Contact() {
                       rel="noreferrer"
                       className=""
                     >
-                      <p className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}>
+                      <p
+                        className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}
+                      >
                         Amsterdam
                       </p>
                     </a>
                   </div>
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
 
         <div className="flex justify-center">
-          <div className="absolute bottom-0 mb-4 flex items-center
+          <div
+            className="absolute bottom-0 mb-4 flex items-center
                 w-[70px] h-[70px]"
           >
-
             <MagneticHover>
               <ul>
                 <li
-                  // onClick={() => handleScroll(targetId)}
+                  onClick={() => handleScroll(targetId)}
                   className="cursor-pointer"
                 >
                   <Image
@@ -254,11 +264,9 @@ export default function Contact() {
                 </li>
               </ul>
             </MagneticHover>
-
           </div>
         </div>
-
       </div>
     </main>
-  )
-};
+  );
+}
