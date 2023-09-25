@@ -13,7 +13,7 @@ const images = [
 export default function Page() {
   return (
     <main id='home' className='relative'>
-      <div className='absolute z-50
+      <div className='absolute z-10
         left-1/2 top-[45%] 
         -translate-x-1/2 -translate-y-[45%]'
       >
