@@ -12,12 +12,12 @@ import EmailIcon from "../../public/images/icons/svg/email_icon.svg";
 import PinPoint from "../../public/images/icons/svg/pin_point.svg";
 import ArrowUp from "../../public/images/icons/svg/arrow_up_colored.svg";
 
-// import LocomotiveScroll from "locomotive-scroll";
+import LocomotiveScroll from "locomotive-scroll";
 
 
 export default function Page() {
-  // const scroll = new LocomotiveScroll();
-  // const targetId = '#home';
+  const scroll = new LocomotiveScroll();
+  const targetId = '#home';
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,13 +26,6 @@ export default function Page() {
   // const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
 
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     // Your code that relies on the window object
-  //     // For example, initializing Locomotive Scroll
-  //     const scroll = new LocomotiveScroll();
-  //   }
-  // }, []);
 
 
   function handleFormSubmit(e) {
@@ -61,13 +54,13 @@ export default function Page() {
     setMessage(e.target.value);
   }
 
-  // function handleScroll(targetId) {
-  //   scroll.scrollTo(targetId, {
-  //     duration: 3,
-  //     lerp: 0.05,
-  //     smoothWheel: true,
-  //   });
-  // }
+  function handleScroll(targetId) {
+    scroll.scrollTo(targetId, {
+      duration: 3,
+      lerp: 0.05,
+      smoothWheel: true,
+    });
+  }
 
   return (
     <main id='contact' className='contact relative w-full h-[100vh]'>
@@ -246,7 +239,7 @@ export default function Page() {
             <MagneticHover>
               <ul>
                 <li
-                  // onClick={() => handleScroll(targetId)}
+                  onClick={() => handleScroll(targetId)}
                   className="cursor-pointer"
                 >
                   <Image
