@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import VideoSlider from '@/_components/videoslider/VideoSlider';
+import VideoSlider from '@/components/videoslider/VideoSlider';
 import styles from "./page.module.scss";
 import Image from 'next/image';
 import svgArrow from "../../public/images/icons/svg/arrows-slider.svg";

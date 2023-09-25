@@ -1,15 +1,15 @@
 "use client"
 import React from 'react';
 import dynamic from 'next/dynamic';
-import LocomotiveScrollSetup from './_components/LocomotiveScrollSetup';
-import HomePage from "./homepage/page";
+import LocomotiveScrollSetup from './components/LocomotiveScrollSetup';
+// import HomePage from "./homepage/page";
 
-const DynamicHeader = dynamic(() => import('./_components/header/Header'), {
+const DynamicHeader = dynamic(() => import('./components/header/Header'), {
   ssr: false,
 });
-// const DynamicHomepage = dynamic(() => import('./homepage/page'), {
-//   ssr: false,
-// });
+const DynamicHomepage = dynamic(() => import('./homepage/page'), {
+  ssr: false,
+});
 const DynamicAbout = dynamic(() => import('./about/page'), {
   ssr: false,
 });
@@ -26,8 +26,8 @@ export default function Home() {
     <main className="relative w-full">
       <LocomotiveScrollSetup />
       <DynamicHeader />
-      <HomePage />
-      {/* <DynamicHomepage /> */}
+      {/* <HomePage /> */}
+      <DynamicHomepage />
       <DynamicAbout />
       <DynamicProjects />
       <DynamicContact />

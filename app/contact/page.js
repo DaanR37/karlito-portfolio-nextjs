@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ContactForm from '@/_components/contactform/ContactForm';
-import MagneticHover from "../_components/magneticHover/MagneticHover";
+import ContactForm from '@/components/contactform/ContactForm';
+import MagneticHover from "../components/magneticHover/MagneticHover";
 
 import styles from "./page.module.scss";
 import Image from "next/image";

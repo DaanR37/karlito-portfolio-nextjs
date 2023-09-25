@@ -1,6 +1,6 @@
-// "use client"
-import Carousel from '../_components/Carousel';
-import ImageComp from "../_components/ImageComp";
+"use client"
+import Carousel from '../components/Carousel';
+import ImageComp from "../components/ImageComp";
 
 const images = [
   "/homepageCarousel/bowling.jpg",
