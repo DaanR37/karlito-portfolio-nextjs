@@ -6,7 +6,7 @@ import styles from "./page.module.scss";
 import Image from 'next/image';
 import svgArrow from "../../public/images/icons/svg/arrows-slider.svg";
 
-export default function Page() {
+export default function Projects() {
   const [currentVideo, setCurrentVideo] = useState(0);
 
   const videoUrls = [

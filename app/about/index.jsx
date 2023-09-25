@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import Karlein from "../../public/images/profilepic/karlein.webp";
 
-export default function Page() {
+export default function About() {
 
   const { ref, inView } = useInView({
     triggerOnce: false,
@@ -16,7 +16,7 @@ export default function Page() {
   };
 
   return (
-    <main ref={ref} id='about' className='about flex relative h-[100vh]'> {/* w-full */}
+    <main ref={ref} id='about' className='about relative flex h-[100vh]'> {/* w-full */}
       <motion.div
         className="left-container relative w-[50%]"
         initial="hidden"

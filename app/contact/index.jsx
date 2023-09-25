@@ -15,7 +15,7 @@ import ArrowUp from "../../public/images/icons/svg/arrow_up_colored.svg";
 // import LocomotiveScroll from "locomotive-scroll";
 
 
-export default function Page() {
+export default function Contact() {
   // const scroll = new LocomotiveScroll();
   // const targetId = '#home';
 
