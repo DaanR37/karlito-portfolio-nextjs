@@ -43,9 +43,9 @@ export default function HomePage() {
             rel="preload"
             as="image"
             sizes="
-        (max-width: 768px) 100vw,
-        (max-width: 1535px) 50vw,
-        50vw"
+            (max-width: 768px) 100vw,
+            (max-width: 1535px) 50vw,
+            50vw"
             fill
             style={{
               objectFit: "cover",
