@@ -12,7 +12,8 @@ import PhoneIcon from "../../public/images/icons/svg/phone_1.svg";
 import EmailIcon from "../../public/images/icons/svg/email_icon.svg";
 import PinPoint from "../../public/images/icons/svg/pin_point.svg";
 import ArrowUp from "../../public/images/icons/svg/arrow_up_colored.svg";
-import KarlitoLogo from "../../public/images/logos/karlitos-way-logo.webp";
+
+// import KarlitoLogo from "../../public/images/logos/karlitos-way-logo.webp";
 
 export default function Contact() {
   const scroll = new LocomotiveScroll();

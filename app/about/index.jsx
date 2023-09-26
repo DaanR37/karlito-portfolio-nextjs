@@ -25,22 +25,29 @@ export default function About() {
       className="about relative flex 
         min-h-[100vh]"
     >
+      {/* Parent Container Image */}
       <motion.div
-        className={`left-container relative w-[50%] xs:w-full ${
-          isSmallScreen ? "small-screen" : ""
-        }`}
+        className="left-container relative 
+            w-[50%] 
+            md:w-full"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         transition={{ duration: 0.9, ease: "easeInOut", delay: 0.4 }}
         variants={variants}
       >
-        {isSmallScreen && inView && <div className="darkOverlay
-        absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.7)] backdrop-blur-[10px] z-[1]"></div>}
+        {isSmallScreen && inView && (
+          <div
+            className="darkOverlay absolute z-[1]
+             top-0 left-0 w-full h-full 
+             bg-[rgba(0,0,0,0.7)] backdrop-blur-[5px]"
+          ></div>
+        )}
 
+        {/* Child Container Image */}
         <div
           className="relative flex 
             h-[100vh]
-            xs:absolute xs:w-full"
+            md:absolute md:w-full"
         >
           <Image
             src={Karlein}
@@ -57,33 +64,41 @@ export default function About() {
               objectFit: "cover",
               objectPosition: "left",
               width: "100%",
-              // borderRadius: "5px",
+              borderRadius: "5px",
             }}
           />
         </div>
       </motion.div>
+
+      {/* Container Text */}
       <motion.div
         className="right-container flex justify-center z-[2]
-            w-[50%] pt-14 px-4
-            xs:absolute xs:w-full"
+            w-[50%] px-4 pt-[15%]
+            md:absolute md:w-full
+            md:h-full md:items-center
+            md:px-0 md:pt-0"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         transition={{ duration: 0.9, ease: "easeInOut", delay: 1.2 }}
         variants={variants}
       >
-        <p className="text-light text-lg max-w-[80%]">
-          {/* or max-w-[42.5vw] */}
-          <span className="">
-            Altijd ben ik op zoek naar unieke plekken, dat fascineert mij al
-            mijn leven lang. Samen met een regisseur, artdirector of producent
-            ga ik aan de slag om het perfecte plaatje te maken. Daarbij is het
-            belangrijk efficiënt te werk te gaan, te kijken naar de locatie, de
-            omgeving en het budget, maar ook creatief kunnen kijken naar
-            oplossingen. Een andere invalshoek te kunnen geven. De perfectie
-            locatie voor film, fotografie of een evenement, omdat ik het nou
-            eenmaal niet kan laten net even het hoekje om te lopen of achter dat
-            muurtje te kijken. Naast het actieve scouten heb ik door een nauwe
-            samenwerking
+        <p
+          className="text-light
+            max-w-[80%] text-xl
+            lg:max-w-[90%] lg:text-[17px]
+            md:max-w-[75%] xs:text-base"
+        >
+          <span>
+            Altijd gefascineerd door unieke plekken, heeft deze passie me mijn
+            hele leven gegrepen. In samenwerking met regisseurs, artdirectors en
+            producenten streef ik naar het creëren van het perfecte visuele
+            verhaal. Efficiëntie staat centraal, met aandacht voor de locatie,
+            de omgeving en het budget, terwijl we tegelijkertijd een creatieve
+            blik hanteren om alternatieve perspectieven te ontdekken. Onze
+            missie is om de ideale setting te vinden voor film, fotografie of
+            evenementen. Met een gevarieerd archief, opgebouwd door actief te
+            scouten, kunnen we gerichte zoekopdrachten uitvoeren om ons vermogen
+            om buitengewone locaties te vinden nog verder te versterken.
           </span>
         </p>
       </motion.div>

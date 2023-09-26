@@ -7,17 +7,22 @@ import LogoKarlito from "../../public/images/logos/karlitos-way-locations.webp";
 
 const images = [
   "/homepageCarousel/bowling.jpg",
+  "/homepageCarousel/bathroom.jpg",
   "/homepageCarousel/diner.jpg",
+  "/homepageCarousel/bedroom.jpg",
   "/homepageCarousel/poolhall.jpg",
+  "/homepageCarousel/church.jpg",
   "/homepageCarousel/restaurant.jpg",
+  "/homepageCarousel/longhall.jpg",
   "/homepageCarousel/stairs.jpg",
+  "/homepageCarousel/mirror.jpg",
 ];
 
 export default function HomePage() {
   return (
     <main id="home" className="relative w-[100vw] h-[110vh]">
       <div className="h-full w-full">
-        <Carousel images={images} interval={5000} />
+        <Carousel images={images} interval={3000} />
 
         {/* Logo Karlito's Way Location Homepage */}
         <motion.div
@@ -83,8 +88,8 @@ const Carousel = ({ images, interval }) => {
           key={index}
           src={`/images${image}`}
           alt=""
-          width={800}
-          height={800}
+          width={900}
+          height={900}
           style={{
             position: "absolute",
             width: "100%",
