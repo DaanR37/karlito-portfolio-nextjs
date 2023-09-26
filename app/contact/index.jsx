@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import LocomotiveScroll from "locomotive-scroll";
 import ContactForm from "@/components/contactform/ContactForm";
 import MagneticHover from "../components/magneticHover/MagneticHover";
 
@@ -11,8 +12,7 @@ import PhoneIcon from "../../public/images/icons/svg/phone_1.svg";
 import EmailIcon from "../../public/images/icons/svg/email_icon.svg";
 import PinPoint from "../../public/images/icons/svg/pin_point.svg";
 import ArrowUp from "../../public/images/icons/svg/arrow_up_colored.svg";
-
-import LocomotiveScroll from "locomotive-scroll";
+import KarlitoLogo from "../../public/images/logos/karlitos-way-logo.webp";
 
 export default function Contact() {
   const scroll = new LocomotiveScroll();
@@ -62,6 +62,7 @@ export default function Contact() {
   return (
     <main id="contact" className="contact relative w-full h-[100vh]">
       <div className="absolute w-full h-full bg-dark">
+        {/* Image Karlein with Camera */}
         <div
           className={`${styles.karlein} absolute w-1/2 h-full left-0 bg-[#587a97]`}
         ></div>
@@ -99,17 +100,17 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Container Contact Details left */}
+              {/* Container Contact Details left Container */}
               <div
-                className="
+                className="relative flex
                       w-1/2 h-full"
               >
                 {/* Container Icons with Text */}
                 <div
-                  className=" 
-                    w-full h-1/2 px-14 mt-10
-                    flex flex-col justify-evenly
-                    text-light"
+                  className="absolute text-light
+                    h-full mt-24
+                    left-1/2 -translate-x-1/2
+                    flex flex-col justify-start"
                 >
                   {/* Icon 1 */}
                   <div
@@ -118,7 +119,7 @@ export default function Contact() {
                   >
                     <div
                       className="relative
-                      w-[40px] h-[40px]"
+                      w-[45px] h-[45px]"
                     >
                       <motion.a
                         href="tel:0651230756"
@@ -156,7 +157,7 @@ export default function Contact() {
                   >
                     <div
                       className="relative
-                        w-[40px] h-[40px]"
+                        w-[45px] h-[45px]"
                     >
                       <motion.a
                         href="mailto:info@karlein.nl"
@@ -199,7 +200,7 @@ export default function Contact() {
                   >
                     <div
                       className="relative
-                        w-[40px] h-[40px]"
+                        w-[45px] h-[45px]"
                     >
                       <motion.a
                         href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
@@ -236,15 +237,51 @@ export default function Contact() {
                     </a>
                   </div>
                 </div>
+
+                {/* Logo Karlito Footer */}
+                <motion.div
+                  initial={{ y: "300px" }}
+                  whileInView={{ y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{
+                    duration: 1.1,
+                  }}
+                  className="
+                      w-full
+                      flex items-end justify-center"
+                >
+                  <div
+                    className="
+                      w-[250px] h-[100px]"
+                  >
+                    <Image
+                      src={KarlitoLogo}
+                      alt="Karlito Logo Footer"
+                      priority={true}
+                      rel="preload"
+                      as="image"
+                      // sizes="(max-width: 768px) 100vw,
+                      // (max-width: 1535px) 50vw,
+                      // 50vw"
+                      // fill
+                      style={{
+                        objectFit: "cover",
+                        width: "100%",
+                      }}
+                    />
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Arrow Scroll Up */}
         <div className="flex justify-center">
           <div
-            className="absolute bottom-0 mb-4 flex items-center
-                w-[70px] h-[70px]"
+            className="absolute flex items-center
+              bottom-0 mb-4
+              w-[70px] h-[70px]"
           >
             <MagneticHover>
               <ul>
@@ -254,7 +291,7 @@ export default function Contact() {
                 >
                   <Image
                     src={ArrowUp}
-                    alt=""
+                    alt="Button for scrolling up"
                     style={{
                       objectFit: "cover",
                       width: "100%",
