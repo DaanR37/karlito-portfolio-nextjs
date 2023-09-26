@@ -1,19 +1,4 @@
 .header {
-  position: fixed;
-  padding: 30px;
-  right: 0;
-  z-index: 12;
-  .button {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3d87c7;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
   .burger {
     width: 100%;
     &::after,

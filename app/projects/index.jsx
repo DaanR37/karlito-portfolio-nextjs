@@ -45,8 +45,12 @@ export default function Projects() {
 
 
   return (
-    <main id='projects' className={`${styles.projects}`}>
-      <div className={styles.videoTitle}>
+    <main id='projects' className="projects relative 
+        min-h-screen flex flex-col 
+        items-center justify-center">
+      <div className="videoTitle mb-8
+          text-[21px] text-center 
+          text-light font-bold">
         {videos[currentVideo].title}
       </div>
       <motion.button

@@ -1,31 +1,4 @@
-.projects {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.videoTitle {
-  font-size: 21px;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: whitesmoke;
-  font-weight: bold;
-}
-
-.videoPlayer {
-  position: relative;
-  width: 60vw;
-  max-width: 800px;
-  height: 33.75vw;
-  max-height: 450px;
-  margin-top: 0;
-  border: 2px solid #fff;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
 
 .navButton {
   position: absolute;

@@ -1,6 +1,5 @@
 "use client"
 import { motion } from "framer-motion";
-import styles from "../../projects/page.module.scss";
 
 const variants = {
   hidden: { opacity: 0 },
@@ -21,7 +20,9 @@ const VideoSlider = ({ video }) => (
     exit="exit"
   >
     <iframe
-      className={`${styles.videoPlayer}`}
+      className="videoPlayer relative mt-0
+          w-[60vw] max-w-[800px] h-[33.75vw] max-h-[450px]
+          border-solid border-light border-[2px] rounded-[10px]"
       width="560"
       height="315"
       src={`https://www.youtube.com/embed/${video.id}`}

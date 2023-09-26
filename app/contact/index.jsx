@@ -239,7 +239,8 @@ export default function Contact() {
                 </div>
 
                 {/* Logo Karlito Footer */}
-                <motion.div
+                
+                {/* <motion.div
                   initial={{ y: "300px" }}
                   whileInView={{ y: 0 }}
                   viewport={{ once: false }}
@@ -270,7 +271,7 @@ export default function Contact() {
                       }}
                     />
                   </div>
-                </motion.div>
+                </motion.div> */}
               </div>
             </div>
           </div>

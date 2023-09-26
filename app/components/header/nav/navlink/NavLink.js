@@ -1,5 +1,4 @@
 // "use client"
-import styles from "./navlink.module.scss";
 import { motion } from 'framer-motion';
 import { slide, scale } from "../../anim";
 import LocomotiveScroll from "locomotive-scroll";
@@ -25,9 +24,28 @@ export default function NavLink({ data, isActive, setSelectedIndicator, closeMen
   };
 
   return (
-    <motion.div className={styles.link} onMouseEnter={() => { setSelectedIndicator(href) }} custom={index} variants={slide} initial="initial" animate="enter" exit="exit">
-      <motion.div variants={scale} animate={isActive ? "open" : "closed"} className={styles.indicator}></motion.div>
-      <a href={href} onClick={handleClick}>
+    <motion.div
+      onMouseEnter={() => { setSelectedIndicator(href) }}
+      custom={index}
+      variants={slide}
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      className="link relative flex items-center"
+    >
+      <motion.div
+        variants={scale}
+        animate={isActive ? "open" : "closed"}
+        className="indicator absolute 
+          w-[7px] h-[7px] -left-[30px]
+          bg-light rounded-full"
+      >
+      </motion.div>
+      <a
+        href={href}
+        onClick={handleClick}
+        className="text-light font-light"
+      >
         {title}
       </a>
     </motion.div>

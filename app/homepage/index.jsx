@@ -16,9 +16,10 @@ const images = [
 export default function HomePage() {
   return (
     <main id="home" className="relative w-[100vw] h-[110vh]">
-      <div className="relative h-full w-full">
+      <div className="h-full w-full">
         <Carousel images={images} interval={5000} />
 
+        {/* Logo Karlito's Way Location Homepage */}
         <motion.div
           initial={{
             opacity: 0,
@@ -30,11 +31,14 @@ export default function HomePage() {
             duration: 0.9,
             ease: "easeInOut",
           }}
-          className="absolute flex
-          mx-auto
-          top-[45%] -translate-y-[45%]
-          left-1/2 -translate-x-1/2
-          w-[1100px] h-[450px]"
+          className="absolute flex mx-auto
+              w-[1100px] h-[450px]
+              xl:w-[750px] xl:h-[435px]
+              lg:w-[700px] lg:h-[375px]
+              md:w-[650px] md:h-[325px]
+              xs:w-[550px] xs:h-[225px]
+              top-[45%] -translate-y-[45%]
+              left-1/2 -translate-x-1/2"
         >
           <Image
             src={LogoKarlito}
@@ -73,7 +77,7 @@ const Carousel = ({ images, interval }) => {
   }, [images, interval]);
 
   return (
-    <div className="">
+    <div className="h-full w-full">
       {images.map((image, index) => (
         <Image
           key={index}

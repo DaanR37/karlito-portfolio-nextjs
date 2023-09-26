@@ -5,8 +5,6 @@ import styles from "./header.module.scss";
 import { AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
-// import Magnetic from "../../components/magneticHover/MagneticHover";
-
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -25,15 +23,19 @@ export default function Header() {
 
   return (
     <>
-      {/* <Magnetic> */}
-      <header className={styles.header}>
-        <div onClick={() => { setIsActive(!isActive) }} className={styles.button}>
+      <header className={`${styles.header} fixed right-0 p-[30px] z-[12]
+            xs:p-[25px]`}>
+        <div onClick={() => { setIsActive(!isActive) }}
+          className={`${styles.button} 
+            w-[55px] h-[55px] 
+            xs:w-[45px] xs:h-[45px]
+            flex items-center justify-center 
+            rounded-full bg-[#3d87c7] cursor-pointer`}>
           <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}>
 
           </div>
         </div>
       </header>
-      {/* </Magnetic> */}
       <AnimatePresence mode="wait">
         {isActive && <Nav closeMenu={closeMenu} />}
       </AnimatePresence>
