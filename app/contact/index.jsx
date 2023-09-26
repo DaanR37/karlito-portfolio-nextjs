@@ -276,7 +276,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Arrow Scroll Up */}
+        {/* Arrow Scrolling Up */}
         <div className="flex justify-center">
           <div
             className="absolute flex items-center
