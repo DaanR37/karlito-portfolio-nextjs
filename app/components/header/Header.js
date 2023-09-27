@@ -30,7 +30,9 @@ export default function Header() {
             w-[55px] h-[55px] 
             xs:w-[45px] xs:h-[45px]
             flex items-center justify-center 
-            rounded-full bg-[#3d87c7] cursor-pointer`}>
+            rounded-full bg-[#f8f0e5] 
+            cursor-pointer`}
+        >
           <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}>
 
           </div>

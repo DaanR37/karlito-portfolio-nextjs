@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { slide, scale } from "../../anim";
 import LocomotiveScroll from "locomotive-scroll";
+import { poppins, open_sans, roboto_flex, roboto, poiret_one } from '@/fonts';
 
 
 export default function NavLink({ data, isActive, setSelectedIndicator, closeMenu }) {
@@ -44,7 +45,7 @@ export default function NavLink({ data, isActive, setSelectedIndicator, closeMen
       <a
         href={href}
         onClick={handleClick}
-        className="text-light font-light"
+        className={`${open_sans.className} text-light font-light`}
       >
         {title}
       </a>

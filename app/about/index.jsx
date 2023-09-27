@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
-
 import { useInView } from "react-intersection-observer";
 import Karlein from "../../public/images/profilepic/karlein.webp";
 
@@ -83,7 +82,7 @@ export default function About() {
         variants={variants}
       >
         <p
-          className="text-light
+          className="text-light font-semibold
             max-w-[80%] text-xl
             lg:max-w-[90%] lg:text-[17px]
             md:max-w-[75%] xs:text-base"

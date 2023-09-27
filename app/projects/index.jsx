@@ -1,81 +1,135 @@
-"use client"
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import VideoSlider from '@/components/videoslider/VideoSlider';
-import styles from "./page.module.scss";
-import Image from 'next/image';
+"use client";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import VideoSlider from "@/components/videoslider/VideoSlider";
+import Image from "next/image";
 import svgArrow from "../../public/images/icons/svg/arrows-slider.svg";
 
 export default function Projects() {
   const [currentVideo, setCurrentVideo] = useState(0);
 
   const videoUrls = [
-    'https://www.youtube.com/watch?v=SarOJwIz4Zg',
-    'https://www.youtube.com/watch?v=AzBBrWqOD5M',
-    'https://www.youtube.com/watch?v=OiAgd3CeBs8',
-    'https://www.youtube.com/watch?v=ySjWjpCELqU',
-    'https://www.youtube.com/watch?v=egOmX4quvrs'
+    "https://www.youtube.com/watch?v=SarOJwIz4Zg",
+    "https://www.youtube.com/watch?v=AzBBrWqOD5M",
+    "https://www.youtube.com/watch?v=OiAgd3CeBs8",
+    "https://www.youtube.com/watch?v=ySjWjpCELqU",
+    "https://www.youtube.com/watch?v=egOmX4quvrs",
   ];
-  const videos = videoUrls.map(url => ({
-    id: url.split('v=')[1],
-    title: getVideoTitleFromUrl(url)
+  const videos = videoUrls.map((url) => ({
+    id: url.split("v=")[1],
+    title: getVideoTitleFromUrl(url),
   }));
   function getVideoTitleFromUrl(url) {
     // Extract the video ID from the URL
-    const videoId = url.split('v=')[1];
+    const videoId = url.split("v=")[1];
 
     // You can fetch the video title from YouTube's API if you have it
     // or you can manually set titles if you know them
 
     // Map video IDs to corresponding titles (you can add more titles as needed)
     const videoTitles = {
-      'SarOJwIz4Zg': 'Mocro Maffia seizoen 1',
-      'AzBBrWqOD5M': 'Mocro Maffia seizoen 2',
-      'OiAgd3CeBs8': 'Mocro Maffia seizoen 3',
-      'ySjWjpCELqU': 'Mocro Maffia seizoen 4',
-      'egOmX4quvrs': 'ŠKODA Zaterdagfamilies',
+      SarOJwIz4Zg: "Mocro Maffia seizoen 1",
+      AzBBrWqOD5M: "Mocro Maffia seizoen 2",
+      OiAgd3CeBs8: "Mocro Maffia seizoen 3",
+      ySjWjpCELqU: "Mocro Maffia seizoen 4",
+      egOmX4quvrs: "ŠKODA Zaterdagfamilies",
     };
 
     // Return the title corresponding to the video ID
-    return videoTitles[videoId] || 'Unknown Title';
+    return videoTitles[videoId] || "Unknown Title";
   }
 
   const nextVideo = () => setCurrentVideo((currentVideo + 1) % videos.length);
-  const prevVideo = () => setCurrentVideo((currentVideo - 1 + videos.length) % videos.length);
-
+  const prevVideo = () =>
+    setCurrentVideo((currentVideo - 1 + videos.length) % videos.length);
 
   return (
-    <main id='projects' className="projects relative 
-        min-h-screen flex flex-col 
-        items-center justify-center">
-      <div className="videoTitle mb-8
-          text-[21px] text-center 
-          text-light font-bold">
-        {videos[currentVideo].title}
+    <main
+      id="projects"
+      className="projects relative mt-[5rem]
+        w-full min-h-screen flex flex-col 
+        items-center justify-center"
+    >
+      {/* w-full ?? */}
+
+      {/* Container Buttons Title & Player - Experimental */}
+      <div
+        className="
+          lg:h-full lg:w-full 
+          lg:flex lg:flex-col lg:items-center lg:justify-center"
+      >
+        {/* Container Title - Experimental */}
+        <div
+          className="flex justify-center 
+          mb-8 text-[21px] text-center 
+          lg:flex lg:flex-col lg:order-1
+          lg:text-[17px]
+          text-light font-bold"
+        >
+          {videos[currentVideo].title}
+        </div>
+        {/* Container Buttons Left & Right - Experimental */}
+        <div
+          className="lg:relative
+            lg:w-full lg:max-w-[40vw] lg:mt-14 lg:order-3
+            lg:flex lg:flex-col lg:items-center"
+        >
+          <div className="lg:m-0">
+            <motion.button
+              whileHover={{
+                backgroundColor: "#555555",
+                transition: { duration: 0.3 },
+              }}
+              className="absolute flex items-center justify-center
+                w-[40px] h-[40px] top-1/2 -translate-y-1/2 p-[10px] left-[4rem]
+
+                lg:w-[35px] lg:h-[35px] 
+                lg:flex lg:flex-col lg:top-0 lg:left-0  
+
+                rounded-full border-none outline-none no-underline
+                bg-[#f8f0e5] cursor-pointer"
+              onClick={prevVideo}
+            >
+              <Image
+                src={svgArrow}
+                alt="button previous video"
+                className="absolute rotate-[180deg]
+                    w-[30px]
+                    lg:w-[25px]"
+              />
+            </motion.button>
+          </div>
+          <div className="lg:m-0">
+            <motion.button
+              whileHover={{
+                backgroundColor: "#555555",
+                transition: { duration: 0.2 },
+              }}
+              className="absolute flex items-center justify-center
+                w-[40px] h-[40px] top-1/2 -translate-y-1/2 p-[10px] right-[4rem]
+            
+                lg:w-[35px] lg:h-[35px] 
+                lg:flex lg:flex-col lg:top-0 lg:right-0
+
+                rounded-full border-none outline-none no-underline
+                bg-[#f8f0e5] cursor-pointer"
+              onClick={nextVideo}
+            >
+              <Image
+                src={svgArrow}
+                alt="button next video"
+                className="absolute 
+                    w-[30px]
+                    lg:w-[25px]"
+              />
+            </motion.button>
+          </div>
+        </div>
+        {/* Container VideoSlider - Experimental */}
+        <div className="lg:order-2">
+          <VideoSlider video={videos[currentVideo]} />
+        </div>
       </div>
-      <motion.button
-        whileHover={{ backgroundColor: '#555555', transition: { duration: 0.3 } }}
-        className={`${styles.navButton} ${styles.prevButton}`}
-        onClick={prevVideo}
-      >
-        <Image
-          src={svgArrow}
-          alt=''
-          className='rotate-[180deg] invert'
-        />
-      </motion.button>
-      <motion.button
-        whileHover={{ backgroundColor: '#555555', transition: { duration: 0.2 } }}
-        className={`${styles.navButton} ${styles.nextButton}`}
-        onClick={nextVideo}
-      >
-        <Image
-          src={svgArrow}
-          alt=''
-          className='invert'
-        />
-      </motion.button>
-      <VideoSlider video={videos[currentVideo]} />
     </main>
-  )
-};
+  );
+}

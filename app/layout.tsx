@@ -1,9 +1,8 @@
 import React from 'react';
 import "./globals.scss";
-// import { roboto_flex } from "./fonts";
-import type { Metadata } from "next";
+import { poppins, open_sans, roboto_flex, roboto, poiret_one } from '@/fonts';
 
-// const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://karlein.nl"),
@@ -51,10 +50,11 @@ export const metadata: Metadata = {
     },
   },
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="">{children}</body>
+      <body className={poiret_one.className}>{children}</body>
     </html>
   );
 }
