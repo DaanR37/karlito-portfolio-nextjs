@@ -9,12 +9,11 @@ export default function ContactForm(props) {
       action="https://api.web3forms.com/submit"
       method="POST"
       className="form relative flex flex-col text-light
-                px-12 
-                xl:px-10 
-                lg:px-8 
-                md:px-6 
-                sm:px-0 sm:mb-16
-                xs:my-6 xs:px-[15px]"
+                px-8
+                xl:my-6 xl:px-6
+                lg:my-5 lg:px-[25px]
+                sm:my-3 sm:px-[20px]
+                xs:my-5 xs:px-[15px]"
     >
       {/* Comes with Web3Forms plug-in */}
       <input type="hidden" name="access_key" value="89254cb6-fad2-4805-9326-5dc6b80b1154" />
@@ -24,22 +23,25 @@ export default function ContactForm(props) {
 
 
       {/* Container Form Fields Name, Email, Message */}
-      <div className="h-full w-full flex flex-col">
-        {/* Label Name */}
+      <div className="
+          w-full h-full flex flex-col"
+      >
+        {/* Label NAME */}
         <div className="flex flex-col 
                 mb-5 
-                sm:mb-12
-                xs:mb-2"
+                xl:mb-0
+                lg:mb-3
+                md:mb-5
+                sm:mb-2"
         >
           <label
             htmlFor="name"
             className="border-light/50 text-dark font-extrabold 
-                      mb-[7px]
-                      text-2xl 
-                      xl:text-xl 
-                      md:text-lg
-                      sm:border-t-[0.5px] sm:py-2
-                      xs:text-base xs:mb-1 xs:py-0"
+                      text-2xl mb-[7px]
+                      xl:text-xl xl:mb-[2px]
+                      lg:mb-[7px]
+                      sm:border-t-[0.5px] sm:mb-1 sm:py-1
+                      xs:text-base xs:py-0"
           >
             Naam
           </label>
@@ -52,27 +54,30 @@ export default function ContactForm(props) {
             onChange={props.onNameChange}
             placeholder="Voor-en achternaam"
             style={{ fontStyle: 'italic' }}
-            className="input-field font-light
+            className="input-field font-extrabold
                 h-[40px] pl-2 
+                xl:h-[35px]
                 xs:h-[25px]
-                focus:outline-none rounded-[5px] bg-[black]"
+                focus:outline-none rounded-[5px] 
+                bg-[black]"
           />
         </div>
         {/* Label Email */}
         <div className="flex flex-col 
                 mb-5 
-                sm:mb-12
-                xs:mb-2"
+                xl:mb-0
+                lg:mb-3
+                md:mb-5
+                sm:mb-2"
         >
           <label
             htmlFor="email"
             className="border-light/50 text-dark font-extrabold
-                         mb-[7px]
-                         text-2xl mt-4
-                         xl:text-xl 
-                         md:text-lg 
-                         sm:border-t-[0.5px] sm:py-2 
-                         xs:text-base xs:mb-1 xs:py-0"
+                      text-2xl mb-[7px] mt-4
+                      xl:text-xl xl:mb-[2px]
+                      lg:mb-[7px]
+                      sm:border-t-[0.5px] sm:mb-1 sm:py-1 
+                      xs:text-base xs:py-0"
           >
             Email
           </label>
@@ -84,27 +89,27 @@ export default function ContactForm(props) {
             onChange={props.onEmailChange}
             placeholder="Voer je email adres in"
             style={{ fontStyle: 'italic' }}
-            className="input-field font-light 
+            className="input-field font-extrabold
                 h-[40px] pl-2
+                xl:h-[35px]
                 xs:h-[25px]
-                focus:outline-none rounded-[5px] bg-[black]"
+                focus:outline-none rounded-[5px] 
+                bg-[black]"
           />
         </div>
         {/* Label Message */}
         <div className="flex flex-col 
-                mb-5 
-                sm:mb-12
+                mb-8 
                 xs:mb-4"
         >
           <label
             htmlFor="message"
             className="border-light/50 text-dark font-extrabold
-                         mb-[7px]
-                         text-2xl mt-4
-                         xl:text-xl 
-                         md:text-lg
-                         sm:border-t-[0.5px] sm:py-2
-                         xs:text-base xs:mb-1 xs:py-0"
+                      text-2xl mb-[7px] mt-4
+                      xl:text-xl xl:mb-[2px]
+                      lg:mb-[7px]
+                      sm:border-t-[0.5px] sm:mb-1 sm:py-1
+                      xs:text-base xs:py-0"
           >
             Bericht
           </label>
@@ -117,27 +122,36 @@ export default function ContactForm(props) {
             onChange={props.onMessageChange}
             placeholder="Typ hier je bericht"
             style={{ fontStyle: 'italic' }}
-            className="input-field font-light 
+            className="input-field font-extrabold
                 h-[150px] pl-2 pt-2 
+                xl:h-[175px]
+                lg:h-[150px]
                 xs:h-[120px] xs:pt-0
-                focus:outline-none rounded-[5px] bg-[black]"
+                focus:outline-none rounded-[5px] 
+                bg-[black]"
           />
         </div>
       </div>
 
       {/* Container Send Button & Validation Message */}
-      <div className="w-full flex items-center justify-between text-dark">
+      <div className="
+            w-full flex items-center justify-between 
+            text-dark"
+      >
         <button
           type="submit"
-          className="rounded-sm font-bold bg-[#f8f0e5] border-[0.5px] 
+          className="rounded-sm font-extrabold tracking-wider bg-[#f8f0e5] border-[0.5px] 
                    border-light hover:bg-light hover:text-dark 
                    hover:border-dark transition-all duration-[350ms] ease-in-out
-                   w-1/4 py-2 text-base
-                   sm:w-[20%]
-                   xs:py-1"
+
+                   w-1/5 py-1 text-lg
+                   xl:w-1/4
+                   lg:w-1/5 lg:py-2
+                   md:text-[17px]
+                   sm:text-base sm:py-1"
         // disabled={props.loading}
         >
-          Send
+          SEND
         </button>
 
         {/* Comes with Web3Forms plug-in */}

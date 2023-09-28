@@ -64,6 +64,7 @@ export default function Contact() {
       id="contact"
       className="contact relative 
         w-full h-[100vh]
+        lg:h-[200vh]
         xs:h-[150vh]"
     >
       <div className="absolute w-full h-full bg-dark">
@@ -88,9 +89,10 @@ export default function Contact() {
           <div
             className="relative flex rounded-[5px] bg-dark
               w-[75vw] h-[70vh]
-              xs:w-[80vw] xs:h-[120vh]
-              xs:border-solid xs:border-light 
-              xs:border-[1px] xs:rounded-[10px]"
+              lg:border-solid lg:border-light 
+              lg:border-[1px] lg:rounded-[10px]
+              lg:w-[80vw] lg:h-[170vh]
+              xs:w-[80vw] xs:h-[120vh]"
           >
             {/* Container Contact Form & Contact Details */}
             <div
@@ -100,17 +102,15 @@ export default function Contact() {
               {/* Container Contact Form right Container */}
               <div
                 className="absolute 
-                  w-1/2 h-full right-0
-                  xs:w-full xs:h-1/2 xs:top-0 xs:rounded-t-[10px] xs:items-start
+                  w-1/2 h-full right-0 
                   flex justify-center items-center 
-                  bg-[#949595]"
+                  lg:w-full lg:h-1/2 lg:top-0 lg:items-start 
+                  lg:rounded-t-[10px] bg-[#949595]"
               >
                 <div
                   className="
                     w-full mx-auto"
                 >
-                  {" "}
-                  {/* absolute ?? */}
                   <ContactForm
                     name={name}
                     email={email}
@@ -130,7 +130,7 @@ export default function Contact() {
                 className="absolute 
                       w-1/2 h-full left-0
                       flex justify-center items-center
-                      xs:w-full xs:h-1/2 xs:bottom-0"
+                      lg:w-full lg:h-1/2 lg:bottom-0"
               >
                 {/* Container Icons with Text */}
                 <div
@@ -144,12 +144,13 @@ export default function Contact() {
                     {/* Icon 1 */}
                     <div
                       className="flex items-center
-                          mb-6"
+                          mb-6
+                          lg:mb-10
+                          xs:mb-6"
                     >
                       <div
                         className="relative
-                            w-[50px] h-[50px]
-                            xs:w-[40px] xs:h-[40px]"
+                            w-[50px] h-[50px]"
                       >
                         <motion.a
                           href="tel:0651230756"
@@ -175,9 +176,10 @@ export default function Contact() {
                       <a href="tel:0651230756" target="_blank" rel="noreferrer">
                         <p
                           className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} 
-                            relative
-                            ml-6 text-lg
-                            xs:ml-4 xs:text-base`}
+                            relative text-lg 
+                            ml-6
+                            lg:ml-6 lg:text-xl
+                            md:ml-4 md:text-lg`}
                         >
                           +31 (0)6 5123 0756
                         </p>
@@ -186,12 +188,13 @@ export default function Contact() {
                     {/* Icon 2 */}
                     <div
                       className="flex items-center
-                          my-6"
+                          my-6
+                          lg:my-10
+                          xs:my-6"
                     >
                       <div
                         className="relative
-                            w-[50px] h-[50px]
-                            xs:w-[40px] xs:h-[40px]"
+                            w-[50px] h-[50px]"
                       >
                         <motion.a
                           href="mailto:info@karlein.nl"
@@ -222,9 +225,10 @@ export default function Contact() {
                       >
                         <p
                           className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} 
-                            relative
-                            ml-6 text-lg
-                            xs:ml-4 xs:text-base`}
+                            relative text-lg 
+                            ml-6
+                            lg:ml-6 lg:text-xl
+                            md:ml-4 md:text-lg`}
                         >
                           info@karlein.nl
                         </p>
@@ -233,12 +237,13 @@ export default function Contact() {
                     {/* Icon 3 */}
                     <div
                       className="flex items-center
-                          mt-6"
+                          mt-6
+                          lg:mt-10
+                          xs:mt-6"
                     >
                       <div
                         className="relative
-                            w-[50px] h-[50px]
-                            xs:w-[40px] xs:h-[40px]"
+                            w-[50px] h-[50px]"
                       >
                         <motion.a
                           href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
@@ -269,9 +274,10 @@ export default function Contact() {
                       >
                         <p
                           className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} 
-                            relative
-                            ml-6 text-lg
-                            xs:ml-4 xs:text-base`}
+                            relative text-lg 
+                            ml-6
+                            lg:ml-6 lg:text-xl
+                            md:ml-4 md:text-lg`}
                         >
                           Amsterdam
                         </p>
@@ -321,9 +327,12 @@ export default function Contact() {
         {/* Arrow Scrolling Up */}
         <div className="flex justify-center">
           <div
-            className="absolute flex items-center
+            className="absolute 
+              flex items-center
               bottom-0 mb-4
-              w-[70px] h-[70px]"
+              w-[70px] h-[70px]
+              sm:w-[65px] sm:h-[65px]
+              xs:w-[55px] xs:h-[55px]"
           >
             <MagneticHover>
               <ul>

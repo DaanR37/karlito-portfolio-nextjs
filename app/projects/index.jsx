@@ -14,13 +14,20 @@ export default function Projects() {
     "https://www.youtube.com/watch?v=OiAgd3CeBs8",
     "https://www.youtube.com/watch?v=ySjWjpCELqU",
     "https://www.youtube.com/watch?v=egOmX4quvrs",
+    "https://www.youtube.com/watch?v=UyQ5NNIPTjI",
     "https://www.youtube.com/watch?v=5RrIOV-64JA",
     "https://www.youtube.com/watch?v=c9Jv7JfCMwU",
+    "https://www.youtube.com/watch?v=PNv9uSfj5WY",
+    "https://www.youtube.com/watch?v=ozP1O7vRgWU",
+    "https://www.youtube.com/watch?v=NIVbDaDtWgM",
+    "https://www.youtube.com/watch?v=SefyJto2dLk",
+    "https://www.youtube.com/watch?v=v7p54UqFe40",
     "https://www.youtube.com/watch?v=DlNxZ9iS1qg",
+    "https://www.youtube.com/watch?v=lBNhSU5kiqw",
+    "https://www.youtube.com/watch?v=D3wWQ65Vl5M",
     "https://www.youtube.com/watch?v=Khdl9rN7eSU",
     "https://www.youtube.com/watch?v=Vz9e7R0kRG8",
     "https://www.youtube.com/watch?v=foNTbBXoaY8",
-    "https://www.youtube.com/watch?v=qQRI0HFQb-U",
   ];
   const videos = videoUrls.map((url) => ({
     id: url.split("v=")[1],
@@ -40,13 +47,20 @@ export default function Projects() {
       OiAgd3CeBs8: "Mocro Maffia seizoen 3",
       ySjWjpCELqU: "Mocro Maffia seizoen 4",
       egOmX4quvrs: "ŠKODA Zaterdagfamilies",
+      UyQ5NNIPTjI: "ABN AMRO Dark side of money",
       "5RrIOV-64JA": "Ik ben gehackt",
       c9Jv7JfCMwU: "En nu ben ik verliefd",
+      PNv9uSfj5WY: "Sea Shepherd",
+      ozP1O7vRgWU: "Cero Ismael",
+      NIVbDaDtWgM: "Ballontastic",
+      SefyJto2dLk: "ABN AMRO Familie erfenis",
+      v7p54UqFe40: "Khalini",
       DlNxZ9iS1qg: "De regels van Floor",
+      lBNhSU5kiqw: "Samsung",
+      D3wWQ65Vl5M: "Yubo",
       Khdl9rN7eSU: "Flexe gasten",
       Vz9e7R0kRG8: "De beste granola koop je niet in de winkel - commercial",
       foNTbBXoaY8: "ANNE+",
-      "qQRI0HFQb-U": "Samsung Holiday - commercial",
     };
 
     // Return the title corresponding to the video ID
@@ -72,11 +86,12 @@ export default function Projects() {
       >
         {/* Container Title - Experimental */}
         <div
-          className="flex justify-center 
-          mb-8 text-[21px] text-center 
-          lg:flex lg:flex-col lg:order-1
-          lg:text-[17px]
-          text-light font-bold"
+          className="flex justify-center text-light font-bold
+          mb-7 text-[21px] text-center 
+          xl:mb-6 xl:text-xl
+          lg:mb-4 lg:text-lg lg:flex lg:flex-col lg:order-1
+          md:text-[17px]
+          xs:text-base"
         >
           {videos[currentVideo].title}
         </div>
