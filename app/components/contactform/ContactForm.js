@@ -8,12 +8,13 @@ export default function ContactForm(props) {
       onSubmit={props.onFormSubmit}
       action="https://api.web3forms.com/submit"
       method="POST"
-      className="form flex flex-col justify-between text-light
+      className="form relative flex flex-col text-light
                 px-12 
                 xl:px-10 
                 lg:px-8 
                 md:px-6 
-                sm:px-0 sm:mb-16 sm:border-none"
+                sm:px-0 sm:mb-16
+                xs:my-6 xs:px-[15px]"
     >
       {/* Comes with Web3Forms plug-in */}
       <input type="hidden" name="access_key" value="89254cb6-fad2-4805-9326-5dc6b80b1154" />
@@ -21,43 +22,58 @@ export default function ContactForm(props) {
       {/* <input type="hidden" name="redirect" value="https://web3forms.com/success" /> */}
       {/* <input type="checkbox" name="botcheck" id="" style={{ display: "none" }} /> */}
 
-      <div className="flex flex-col">
+
+      {/* Container Form Fields Name, Email, Message */}
+      <div className="h-full w-full flex flex-col">
+        {/* Label Name */}
         <div className="flex flex-col 
                 mb-5 
-                sm:mb-12">
+                sm:mb-12
+                xs:mb-2"
+        >
           <label
             htmlFor="name"
-            className="border-light/50 
+            className="border-light/50 text-dark font-extrabold 
                       mb-[7px]
                       text-2xl 
                       xl:text-xl 
                       md:text-lg
-                      sm:border-t-[0.5px] sm:py-2">
+                      sm:border-t-[0.5px] sm:py-2
+                      xs:text-base xs:mb-1 xs:py-0"
+          >
             Naam
           </label>
           <input
             id="name"
             name="name"
             type="text"
-            rows="6"
+            // rows="6"
             value={props.name}
             onChange={props.onNameChange}
             placeholder="Voor-en achternaam"
             style={{ fontStyle: 'italic' }}
-            className="input-field font-light focus:outline-none h-[40px] rounded-[5px] pl-2 bg-[black]"
+            className="input-field font-light
+                h-[40px] pl-2 
+                xs:h-[25px]
+                focus:outline-none rounded-[5px] bg-[black]"
           />
         </div>
+        {/* Label Email */}
         <div className="flex flex-col 
                 mb-5 
-                sm:mb-12">
+                sm:mb-12
+                xs:mb-2"
+        >
           <label
             htmlFor="email"
-            className="border-light/50 
+            className="border-light/50 text-dark font-extrabold
                          mb-[7px]
                          text-2xl mt-4
                          xl:text-xl 
                          md:text-lg 
-                         sm:border-t-[0.5px] sm:py-2 ">
+                         sm:border-t-[0.5px] sm:py-2 
+                         xs:text-base xs:mb-1 xs:py-0"
+          >
             Email
           </label>
           <input
@@ -68,43 +84,57 @@ export default function ContactForm(props) {
             onChange={props.onEmailChange}
             placeholder="Voer je email adres in"
             style={{ fontStyle: 'italic' }}
-            className="input-field font-light focus:outline-none h-[40px] rounded-[5px] pl-2 bg-[black]"
+            className="input-field font-light 
+                h-[40px] pl-2
+                xs:h-[25px]
+                focus:outline-none rounded-[5px] bg-[black]"
           />
         </div>
+        {/* Label Message */}
         <div className="flex flex-col 
-                mb-5 sm:mb-12">
+                mb-5 
+                sm:mb-12
+                xs:mb-4"
+        >
           <label
             htmlFor="message"
-            className="border-light/50
+            className="border-light/50 text-dark font-extrabold
                          mb-[7px]
                          text-2xl mt-4
                          xl:text-xl 
                          md:text-lg
-                         sm:border-t-[0.5px] sm:py-2">
+                         sm:border-t-[0.5px] sm:py-2
+                         xs:text-base xs:mb-1 xs:py-0"
+          >
             Bericht
           </label>
           <textarea
             id="message"
             name="message"
             type="text"
-            rows="6"
+            // rows="6"
             value={props.message}
             onChange={props.onMessageChange}
             placeholder="Typ hier je bericht"
             style={{ fontStyle: 'italic' }}
-            className="input-field font-light focus:outline-none rounded-[5px] pl-2 pt-2 bg-[black]"
-          ></textarea>
+            className="input-field font-light 
+                h-[150px] pl-2 pt-2 
+                xs:h-[120px] xs:pt-0
+                focus:outline-none rounded-[5px] bg-[black]"
+          />
         </div>
       </div>
 
-      <div className="w-full flex items-center justify-between">
+      {/* Container Send Button & Validation Message */}
+      <div className="w-full flex items-center justify-between text-dark">
         <button
           type="submit"
-          className="rounded-sm font-semibold bg-transparent border-[0.5px] 
+          className="rounded-sm font-bold bg-[#f8f0e5] border-[0.5px] 
                    border-light hover:bg-light hover:text-dark 
                    hover:border-dark transition-all duration-[350ms] ease-in-out
-                   w-1/4 py-2 text-sm
-                   sm:w-[18%]"
+                   w-1/4 py-2 text-base
+                   sm:w-[20%]
+                   xs:py-1"
         // disabled={props.loading}
         >
           Send

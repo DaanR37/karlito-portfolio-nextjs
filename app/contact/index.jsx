@@ -51,7 +51,6 @@ export default function Contact() {
   function handleMessageChange(e) {
     setMessage(e.target.value);
   }
-
   function handleScroll(targetId) {
     scroll.scrollTo(targetId, {
       duration: 3,
@@ -61,32 +60,57 @@ export default function Contact() {
   }
 
   return (
-    <main id="contact" className="contact relative w-full h-[100vh]">
+    <main
+      id="contact"
+      className="contact relative 
+        w-full h-[100vh]
+        xs:h-[150vh]"
+    >
       <div className="absolute w-full h-full bg-dark">
         {/* Image Karlein with Camera */}
         <div
-          className={`${styles.karlein} absolute w-1/2 h-full left-0 bg-[#587a97]`}
+          className="absolute 
+            w-1/2 h-full left-0 
+            bg-[#949595]"
+          style={{
+            backgroundImage: 'url("/images/profilepic/Karlito_x4-left.jpg")',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPositionX: "left",
+            backgroundPositionY: "10%",
+          }}
         ></div>
 
-        <div className="absolute flex items-center justify-center w-full h-full">
+        <div
+          className="relative w-full h-full 
+              flex items-center justify-center"
+        >
           <div
-            className="absolute flex
+            className="relative flex rounded-[5px] bg-dark
               w-[75vw] h-[70vh]
-              rounded-[5px] bg-dark"
+              xs:w-[80vw] xs:h-[120vh]
+              xs:border-solid xs:border-light 
+              xs:border-[1px] xs:rounded-[10px]"
           >
             {/* Container Contact Form & Contact Details */}
             <div
-              className="absolute flex
+              className="relative flex
                     w-full h-full"
             >
               {/* Container Contact Form right Container */}
               <div
                 className="absolute 
                   w-1/2 h-full right-0
+                  xs:w-full xs:h-1/2 xs:top-0 xs:rounded-t-[10px] xs:items-start
                   flex justify-center items-center 
-                bg-[#587a97]"
+                  bg-[#949595]"
               >
-                <div className="absolute w-full mx-auto">
+                <div
+                  className="
+                    w-full mx-auto"
+                >
+                  {" "}
+                  {/* absolute ?? */}
                   <ContactForm
                     name={name}
                     email={email}
@@ -101,146 +125,162 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Container Contact Details left Container */}
+              {/* Container Contact Details left Container !!!!!!!! */}
               <div
-                className="relative flex
-                      w-1/2 h-full"
+                className="absolute 
+                      w-1/2 h-full left-0
+                      flex justify-center items-center
+                      xs:w-full xs:h-1/2 xs:bottom-0"
               >
                 {/* Container Icons with Text */}
                 <div
-                  className="absolute text-light
-                    h-full mt-24
-                    left-1/2 -translate-x-1/2
-                    flex flex-col justify-start"
+                  className="relative text-light
+                    h-full flex flex-col justify-center"
                 >
-                  {/* Icon 1 */}
                   <div
-                    className="flex items-center justify-start
-                      mb-6"
+                    className="
+                      w-full flex flex-col"
                   >
+                    {/* Icon 1 */}
                     <div
-                      className="relative
-                      w-[45px] h-[45px]"
+                      className="flex items-center
+                          mb-6"
                     >
-                      <motion.a
-                        href="tel:0651230756"
-                        target="_blank"
-                        rel="noreferrer"
-                        whileHover={{ y: -2 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="absolute"
+                      <div
+                        className="relative
+                            w-[50px] h-[50px]
+                            xs:w-[40px] xs:h-[40px]"
                       >
-                        <Image
-                          src={PhoneIcon}
-                          alt=""
-                          className="invert"
-                          style={{
-                            objectFit: "cover",
-                            width: "100%",
-                            opacity: "0.9",
-                            filter: "invert(1)",
-                          }}
-                        />
-                      </motion.a>
+                        <motion.a
+                          href="tel:0651230756"
+                          target="_blank"
+                          rel="noreferrer"
+                          whileHover={{ y: -2 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="absolute"
+                        >
+                          <Image
+                            src={PhoneIcon}
+                            alt=""
+                            className="invert"
+                            style={{
+                              objectFit: "cover",
+                              width: "100%",
+                              opacity: "0.9",
+                              filter: "invert(1)",
+                            }}
+                          />
+                        </motion.a>
+                      </div>
+                      <a href="tel:0651230756" target="_blank" rel="noreferrer">
+                        <p
+                          className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} 
+                            relative
+                            ml-6 text-lg
+                            xs:ml-4 xs:text-base`}
+                        >
+                          +31 (0)6 5123 0756
+                        </p>
+                      </a>
                     </div>
-                    <a href="tel:0651230756" target="_blank" rel="noreferrer">
-                      <p
-                        className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}
-                      >
-                        +31 (0) 6 512 307 56
-                      </p>
-                    </a>
-                  </div>
-                  {/* Icon 2 */}
-                  <div
-                    className="flex items-center justify-start
-                      my-6"
-                  >
+                    {/* Icon 2 */}
                     <div
-                      className="relative
-                        w-[45px] h-[45px]"
+                      className="flex items-center
+                          my-6"
                     >
-                      <motion.a
+                      <div
+                        className="relative
+                            w-[50px] h-[50px]
+                            xs:w-[40px] xs:h-[40px]"
+                      >
+                        <motion.a
+                          href="mailto:info@karlein.nl"
+                          target="_blank"
+                          rel="noreferrer"
+                          whileHover={{ y: -2 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="absolute"
+                        >
+                          <Image
+                            src={EmailIcon}
+                            alt=""
+                            className="invert"
+                            style={{
+                              objectFit: "cover",
+                              width: "100%",
+                              opacity: "0.9",
+                              filter: "invert(1)",
+                            }}
+                          />
+                        </motion.a>
+                      </div>
+                      <a
                         href="mailto:info@karlein.nl"
                         target="_blank"
                         rel="noreferrer"
-                        whileHover={{ y: -2 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="absolute"
+                        className=""
                       >
-                        <Image
-                          src={EmailIcon}
-                          alt=""
-                          className="invert"
-                          style={{
-                            objectFit: "cover",
-                            width: "100%",
-                            opacity: "0.9",
-                            filter: "invert(1)",
-                          }}
-                        />
-                      </motion.a>
+                        <p
+                          className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} 
+                            relative
+                            ml-6 text-lg
+                            xs:ml-4 xs:text-base`}
+                        >
+                          info@karlein.nl
+                        </p>
+                      </a>
                     </div>
-                    <a
-                      href="mailto:info@karlein.nl"
-                      target="_blank"
-                      rel="noreferrer"
-                      className=""
-                    >
-                      <p
-                        className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}
-                      >
-                        info@karlein.nl
-                      </p>
-                    </a>
-                  </div>
-                  {/* Icon 3 */}
-                  <div
-                    className="flex items-center justify-start
-                      mt-6"
-                  >
+                    {/* Icon 3 */}
                     <div
-                      className="relative
-                        w-[45px] h-[45px]"
+                      className="flex items-center
+                          mt-6"
                     >
-                      <motion.a
+                      <div
+                        className="relative
+                            w-[50px] h-[50px]
+                            xs:w-[40px] xs:h-[40px]"
+                      >
+                        <motion.a
+                          href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
+                          target="_blank"
+                          rel="noreferrer"
+                          whileHover={{ y: -2 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="absolute"
+                        >
+                          <Image
+                            src={PinPoint}
+                            alt=""
+                            className="invert"
+                            style={{
+                              objectFit: "cover",
+                              width: "100%",
+                              opacity: "0.9",
+                              filter: "invert(1)",
+                            }}
+                          />
+                        </motion.a>
+                      </div>
+                      <a
                         href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
                         target="_blank"
                         rel="noreferrer"
-                        whileHover={{ y: -2 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="absolute"
+                        className=""
                       >
-                        <Image
-                          src={PinPoint}
-                          alt=""
-                          className="invert"
-                          style={{
-                            objectFit: "cover",
-                            width: "100%",
-                            opacity: "0.9",
-                            filter: "invert(1)",
-                          }}
-                        />
-                      </motion.a>
+                        <p
+                          className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} 
+                            relative
+                            ml-6 text-lg
+                            xs:ml-4 xs:text-base`}
+                        >
+                          Amsterdam
+                        </p>
+                      </a>
                     </div>
-                    <a
-                      href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
-                      target="_blank"
-                      rel="noreferrer"
-                      className=""
-                    >
-                      <p
-                        className={`${styles.hoverUnderlineAnimation} ${styles.textShadow} relative ml-6`}
-                      >
-                        Amsterdam
-                      </p>
-                    </a>
                   </div>
                 </div>
 
                 {/* Logo Karlito Footer */}
-                
                 {/* <motion.div
                   initial={{ y: "300px" }}
                   whileInView={{ y: 0 }}
@@ -305,6 +345,7 @@ export default function Contact() {
             </MagneticHover>
           </div>
         </div>
+        {/* /// */}
       </div>
     </main>
   );

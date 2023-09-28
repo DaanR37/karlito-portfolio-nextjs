@@ -92,12 +92,12 @@ export default function About() {
             hele leven gegrepen. In samenwerking met regisseurs, artdirectors en
             producenten streef ik naar het creëren van het perfecte visuele
             verhaal. Efficiëntie staat centraal, met aandacht voor de locatie,
-            de omgeving en het budget, terwijl we tegelijkertijd een creatieve
-            blik hanteren om alternatieve perspectieven te ontdekken. Onze
+            de omgeving en het budget, terwijl ik tegelijkertijd een creatieve
+            blik hanteer om alternatieve perspectieven te ontdekken. Mijn
             missie is om de ideale setting te vinden voor film, fotografie of
             evenementen. Met een gevarieerd archief, opgebouwd door actief te
-            scouten, kunnen we gerichte zoekopdrachten uitvoeren om ons vermogen
-            om buitengewone locaties te vinden nog verder te versterken.
+            scouten, kan ik gerichte zoekopdrachten uitvoeren en zo het vermogen
+            om buitengewone locaties te vinden nog verder versterken.
           </span>
         </p>
       </motion.div>

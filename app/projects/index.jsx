@@ -14,6 +14,13 @@ export default function Projects() {
     "https://www.youtube.com/watch?v=OiAgd3CeBs8",
     "https://www.youtube.com/watch?v=ySjWjpCELqU",
     "https://www.youtube.com/watch?v=egOmX4quvrs",
+    "https://www.youtube.com/watch?v=5RrIOV-64JA",
+    "https://www.youtube.com/watch?v=c9Jv7JfCMwU",
+    "https://www.youtube.com/watch?v=DlNxZ9iS1qg",
+    "https://www.youtube.com/watch?v=Khdl9rN7eSU",
+    "https://www.youtube.com/watch?v=Vz9e7R0kRG8",
+    "https://www.youtube.com/watch?v=foNTbBXoaY8",
+    "https://www.youtube.com/watch?v=qQRI0HFQb-U",
   ];
   const videos = videoUrls.map((url) => ({
     id: url.split("v=")[1],
@@ -33,6 +40,13 @@ export default function Projects() {
       OiAgd3CeBs8: "Mocro Maffia seizoen 3",
       ySjWjpCELqU: "Mocro Maffia seizoen 4",
       egOmX4quvrs: "ŠKODA Zaterdagfamilies",
+      "5RrIOV-64JA": "Ik ben gehackt",
+      c9Jv7JfCMwU: "En nu ben ik verliefd",
+      DlNxZ9iS1qg: "De regels van Floor",
+      Khdl9rN7eSU: "Flexe gasten",
+      Vz9e7R0kRG8: "De beste granola koop je niet in de winkel - commercial",
+      foNTbBXoaY8: "ANNE+",
+      "qQRI0HFQb-U": "Samsung Holiday - commercial",
     };
 
     // Return the title corresponding to the video ID
@@ -46,12 +60,10 @@ export default function Projects() {
   return (
     <main
       id="projects"
-      className="projects relative mt-[5rem]
+      className="projects relative mt-[2rem]
         w-full min-h-screen flex flex-col 
         items-center justify-center"
     >
-      {/* w-full ?? */}
-
       {/* Container Buttons Title & Player - Experimental */}
       <div
         className="
@@ -81,10 +93,9 @@ export default function Projects() {
                 transition: { duration: 0.3 },
               }}
               className="absolute flex items-center justify-center
-                w-[40px] h-[40px] top-1/2 -translate-y-1/2 p-[10px] left-[4rem]
-
-                lg:w-[35px] lg:h-[35px] 
+                w-[45px] h-[45px] top-1/2 -translate-y-1/2 p-[10px] left-[4rem]
                 lg:flex lg:flex-col lg:top-0 lg:left-0  
+                xs:w-[35px] xs:h-[35px] 
 
                 rounded-full border-none outline-none no-underline
                 bg-[#f8f0e5] cursor-pointer"
@@ -95,7 +106,7 @@ export default function Projects() {
                 alt="button previous video"
                 className="absolute rotate-[180deg]
                     w-[30px]
-                    lg:w-[25px]"
+                    xs:w-[25px]"
               />
             </motion.button>
           </div>
@@ -106,10 +117,9 @@ export default function Projects() {
                 transition: { duration: 0.2 },
               }}
               className="absolute flex items-center justify-center
-                w-[40px] h-[40px] top-1/2 -translate-y-1/2 p-[10px] right-[4rem]
-            
-                lg:w-[35px] lg:h-[35px] 
+                w-[45px] h-[45px] top-1/2 -translate-y-1/2 p-[10px] right-[4rem]
                 lg:flex lg:flex-col lg:top-0 lg:right-0
+                xs:w-[35px] xs:h-[35px] 
 
                 rounded-full border-none outline-none no-underline
                 bg-[#f8f0e5] cursor-pointer"
@@ -120,7 +130,7 @@ export default function Projects() {
                 alt="button next video"
                 className="absolute 
                     w-[30px]
-                    lg:w-[25px]"
+                    xs:w-[25px]"
               />
             </motion.button>
           </div>

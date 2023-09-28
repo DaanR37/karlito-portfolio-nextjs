@@ -18,12 +18,11 @@ const VideoSlider = ({ video }) => (
     initial="hidden"
     animate="show"
     exit="exit"
-    // className="absolute"
   >
     <iframe
       className="videoPlayer relative mt-0
-          w-[60vw] max-w-[800px] h-[33.75vw] max-h-[450px]
-          xs:w-[80vw] xs:h-[53.75vw]
+          w-[65vw] max-w-[800px] h-[38.75vw] max-h-[450px]
+          lg:w-[80vw] lg:h-[53.75vw]
           border-solid border-light border-[2px] rounded-[10px]"
       width="560"
       height="315"
