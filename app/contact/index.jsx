@@ -146,11 +146,12 @@ export default function Contact() {
                       className="flex items-center
                           mb-6
                           lg:mb-10
-                          xs:mb-6"
+                          xs:mb-7"
                     >
                       <div
                         className="relative
-                            w-[50px] h-[50px]"
+                            w-[50px] h-[50px]
+                            xs:w-[35px] xs:h-[35px]"
                       >
                         <motion.a
                           href="tel:0651230756"
@@ -179,7 +180,8 @@ export default function Contact() {
                             relative text-lg 
                             ml-6
                             lg:ml-6 lg:text-xl
-                            md:ml-4 md:text-lg`}
+                            md:ml-4 md:text-lg
+                            xs:text-base`}
                         >
                           +31 (0)6 5123 0756
                         </p>
@@ -190,11 +192,12 @@ export default function Contact() {
                       className="flex items-center
                           my-6
                           lg:my-10
-                          xs:my-6"
+                          xs:my-7"
                     >
                       <div
                         className="relative
-                            w-[50px] h-[50px]"
+                            w-[50px] h-[50px]
+                            xs:w-[35px] xs:h-[35px]"
                       >
                         <motion.a
                           href="mailto:info@karlein.nl"
@@ -228,7 +231,8 @@ export default function Contact() {
                             relative text-lg 
                             ml-6
                             lg:ml-6 lg:text-xl
-                            md:ml-4 md:text-lg`}
+                            md:ml-4 md:text-lg
+                            xs:text-base`}
                         >
                           info@karlein.nl
                         </p>
@@ -239,11 +243,12 @@ export default function Contact() {
                       className="flex items-center
                           mt-6
                           lg:mt-10
-                          xs:mt-6"
+                          xs:mt-7"
                     >
                       <div
                         className="relative
-                            w-[50px] h-[50px]"
+                            w-[50px] h-[50px]
+                            xs:w-[35px] xs:h-[35px]"
                       >
                         <motion.a
                           href="https://goo.gl/maps/C8tcosBz27NuL5dt8"
@@ -277,11 +282,13 @@ export default function Contact() {
                             relative text-lg 
                             ml-6
                             lg:ml-6 lg:text-xl
-                            md:ml-4 md:text-lg`}
+                            md:ml-4 md:text-lg
+                            xs:text-base`}
                         >
                           Amsterdam
                         </p>
                       </a>
+                      
                     </div>
                   </div>
                 </div>

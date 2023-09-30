@@ -48,19 +48,19 @@ export default function Projects() {
       ySjWjpCELqU: "Mocro Maffia seizoen 4",
       egOmX4quvrs: "ŠKODA Zaterdagfamilies",
       UyQ5NNIPTjI: "ABN AMRO Dark side of money",
-      "5RrIOV-64JA": "Ik ben gehackt",
+      "5RrIOV-64JA": "Locked Out seizoen 1",
       c9Jv7JfCMwU: "En nu ben ik verliefd",
       PNv9uSfj5WY: "Sea Shepherd",
       ozP1O7vRgWU: "Cero Ismael",
       NIVbDaDtWgM: "Ballontastic",
       SefyJto2dLk: "ABN AMRO Familie erfenis",
       v7p54UqFe40: "Khalini",
-      DlNxZ9iS1qg: "De regels van Floor",
+      DlNxZ9iS1qg: "De regels van Floor seizoen 2",
       lBNhSU5kiqw: "Samsung",
       D3wWQ65Vl5M: "Yubo",
       Khdl9rN7eSU: "Flexe gasten",
       Vz9e7R0kRG8: "De beste granola koop je niet in de winkel - commercial",
-      foNTbBXoaY8: "ANNE+",
+      foNTbBXoaY8: "ANNE+ seizoen 1",
     };
 
     // Return the title corresponding to the video ID
