@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import LocomotiveScroll from "locomotive-scroll";
 import ContactForm from "@/components/contactform/ContactForm";
 import MagneticHover from "../components/magneticHover/MagneticHover";
+import { poppins } from "@/fonts";
 
 import styles from "./page.module.scss";
 import Image from "next/image";
@@ -12,8 +13,6 @@ import PhoneIcon from "../../public/images/icons/svg/phone_1.svg";
 import EmailIcon from "../../public/images/icons/svg/email_icon.svg";
 import PinPoint from "../../public/images/icons/svg/pin_point.svg";
 import ArrowUp from "../../public/images/icons/svg/arrow_up_colored.svg";
-
-// import KarlitoLogo from "../../public/images/logos/karlitos-way-logo.webp";
 
 export default function Contact() {
   const scroll = new LocomotiveScroll();
@@ -288,44 +287,9 @@ export default function Contact() {
                           Amsterdam
                         </p>
                       </a>
-                      
                     </div>
                   </div>
                 </div>
-
-                {/* Logo Karlito Footer */}
-                {/* <motion.div
-                  initial={{ y: "300px" }}
-                  whileInView={{ y: 0 }}
-                  viewport={{ once: false }}
-                  transition={{
-                    duration: 1.1,
-                  }}
-                  className="
-                      w-full
-                      flex items-end justify-center"
-                >
-                  <div
-                    className="
-                      w-[250px] h-[100px]"
-                  >
-                    <Image
-                      src={KarlitoLogo}
-                      alt="Karlito Logo Footer"
-                      priority={true}
-                      rel="preload"
-                      as="image"
-                      // sizes="(max-width: 768px) 100vw,
-                      // (max-width: 1535px) 50vw,
-                      // 50vw"
-                      // fill
-                      style={{
-                        objectFit: "cover",
-                        width: "100%",
-                      }}
-                    />
-                  </div>
-                </motion.div> */}
               </div>
             </div>
           </div>
@@ -361,7 +325,27 @@ export default function Contact() {
             </MagneticHover>
           </div>
         </div>
-        {/* /// */}
+
+        {/* FrontLabs Credentials */}
+        <div
+          className={`${poppins.className} absolute bottom-0 right-0 mr-6 mb-3
+          sm:hidden`}
+        >
+          <a
+            href="https://www.frontlabsamsterdam.nl/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p
+              className="flex text-light
+                opacity-75 hover:opacity-100 transition duration-[350ms]
+                text-sm
+                md:text-xs"
+            >
+              FrontLabs {new Date().getFullYear()} &copy; All Rights Reserved
+            </p>
+          </a>
+        </div>
       </div>
     </main>
   );
