@@ -2,6 +2,9 @@
 import React from 'react'
 
 export default function ContactForm(props) {
+
+  const accessKey = process.env.NEXT_PUBLIC_MAIL_ACCESS_KEY
+
   return (
     <form
       id="form"
@@ -16,7 +19,7 @@ export default function ContactForm(props) {
                 xs:my-5 xs:px-[15px]"
     >
       {/* Comes with Web3Forms plug-in */}
-      <input type="hidden" name="access_key" value="89254cb6-fad2-4805-9326-5dc6b80b1154" />
+      <input type="hidden" name="access_key" value={accessKey} />
       {/* <input type="hidden" name="subject" value="New Submission from Web3Forms" /> */}
       {/* <input type="hidden" name="redirect" value="https://web3forms.com/success" /> */}
       {/* <input type="checkbox" name="botcheck" id="" style={{ display: "none" }} /> */}
